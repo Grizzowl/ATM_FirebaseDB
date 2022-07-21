@@ -18,6 +18,8 @@ struct LoginView: View {
     @State private var wrongPasswordInput = false
     @State var isLoggedIn = false
     
+    @State private var showPasswordField = false
+    
     let darkGreen = Color("DarkGreen")
     let lightGreen = Color("LightGreen")
     let gold = Color("Gold")
@@ -25,93 +27,114 @@ struct LoginView: View {
     //Nav to home screen if username and pass are true
     var body: some View {
         
-                ZStack{
-                    
-                    darkGreen
-                        .ignoresSafeArea()
-                    Circle()
-                        .scale(1.7)
-                        .foregroundColor(.white)
-                    Circle()
-                        .scale(1.7)
-                        .foregroundColor(lightGreen)
-                    Circle()
-                        .scale(1.39)
-                        .foregroundColor(gold)
-                    Circle()
-                        .scale(1.37)
-                        .foregroundColor(.white)
-                    
-                    Spacer()
-                    
-                    VStack {
-                        Text("Grizz Bank Ltd")
-                            .font(Font.custom("Snell Roundhand", size: 50))
-                            .bold()
-                            .padding()
-                        
-                        Divider()
-                        
-                        //login screen
-                        Text("Login")
-                            .font(.largeTitle)
-                            .bold()
-                            .padding()
-                        
-                        //user login
-                        TextField("Username", text: $username)
-                            .padding()
-                            .frame(width: 300, height: 50)
-                            .background(Color.black.opacity(0.05))
-                            .cornerRadius(15)
-                            .padding(1)
-                            .border(.red, width: CGFloat(wrongUsername)) //wrong or nill user name
-                        
-                        //password login
-                        SecureField("Password", text: $password)
-                            .padding()
-                            .frame(width: 300, height: 50)
-                            .background(Color.black.opacity(0.05))
-                            .cornerRadius(15)
-                            .padding(1)
-                            .border(.red, width: CGFloat(wrongPassword)) //wrong or nill user password
-                        
-                        Button("Sign In") {
-                            
-                            //Auth user code
-                            // WIP need set up new user reg view and link firebase
-                            
-                            
+        ZStack{
+            
+            darkGreen
+                .ignoresSafeArea()
+            Circle()
+                .scale(1.7)
+                .foregroundColor(.white)
+            Circle()
+                .scale(1.7)
+                .foregroundColor(lightGreen)
+            Circle()
+                .scale(1.39)
+                .foregroundColor(gold)
+            Circle()
+                .scale(1.37)
+                .foregroundColor(.white)
+            
+            Spacer()
+            
+            VStack {
+                Text("Grizz Bank Ltd")
+                    .font(Font.custom("Snell Roundhand", size: 50))
+                    .bold()
+                    .padding()
+               
+                Divider()
+                
+                //login screen
+                Text("Login")
+                    .font(.largeTitle)
+                    .bold()
+                    .padding()
+                
+                //user login
+                TextField("Username", text: $username)
+                    .padding()
+                    .frame(width: 300, height: 50)
+                    .background(Color.black.opacity(0.05))
+                    .cornerRadius(15)
+                    .padding(1)
+                    .border(.red, width: CGFloat(wrongUsername)) //wrong or nill user name
+                
+                //password login
+                HStack{
+                    ZStack{
+                        if showPasswordField == false {
+                            SecureField("Password", text: $password)
+                                .padding()
+                                .frame(width: 300, height: 50)
+                                .background(Color.black.opacity(0.05))
+                                .cornerRadius(15)
+                                .padding(1)
+                                .border(.red, width: CGFloat(wrongPassword)) //wrong or nill user password
+                        } else {
+                            TextField("Password", text: $password)
+                                .padding()
+                                .frame(width: 300, height: 50)
+                                .background(Color.black.opacity(0.05))
+                                .cornerRadius(15)
+                                .padding(1)
+                                .border(.red, width: CGFloat(wrongPassword))
                         }
-                        .foregroundColor(.white)
-                        .frame(width: 300, height: 50)
-                        .background(Color.black)
-                        .cornerRadius(15)
-                        .padding(11)
-                        
-                        //error message <here> for username or password
-                        
-                        HStack {
-                            Text("Don't Have An Account?")
-                            NavigationLink(
-                                destination: RegisterNewUserView(),
-                                label: {
-                                    Text("Sign Up")
-                                        .foregroundColor(.blue)
-                                    
-                                })
-                            
-                        } // HStack close
                         
                     }
-                    Spacer()
+                    
+                }.overlay(alignment: .trailing){
+                    Image(systemName: showPasswordField ? "eye.slash": "eye")
+                        .onTapGesture {
+                            showPasswordField.toggle()
+                        }
+                        .padding()
                 }
-                .navigationBarHidden(true)
-            
+                
+                
+                Button("Sign In") {
+                    
+                    //Auth user code
+                    // WIP need set up new user reg view and link firebase
+                    
+                    
+                }
+                .foregroundColor(.white)
+                .frame(width: 300, height: 50)
+                .background(Color.black)
+                .cornerRadius(15)
+                .padding(11)
+                
+                //error message <here> for username or password
+                
+                HStack {
+                    Text("Don't Have An Account?")
+                    NavigationLink(
+                        destination: RegisterNewUserView(),
+                        label: {
+                            Text("Sign Up")
+                                .foregroundColor(.blue)
+                        })
+                } // HStack close
+                
+            }
+            Spacer()
+        }
+        .navigationBarHidden(true)
+        
         
     }
-  
-   
+    
+    
     
 }
 
