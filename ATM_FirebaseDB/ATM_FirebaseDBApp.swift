@@ -18,7 +18,7 @@ struct ATM_FirebaseDBApp: App {
     
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            LoginView()
         }
     }
 }
