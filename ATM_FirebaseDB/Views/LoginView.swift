@@ -93,7 +93,7 @@ struct LoginView: View {
                     }
                     
                 }.overlay(alignment: .trailing){
-                    Image(systemName: showPasswordField ? "eye.slash": "eye")
+                    Image(systemName: showPasswordField ? "eye": "eye.slash")
                         .onTapGesture {
                             showPasswordField.toggle()
                         }
