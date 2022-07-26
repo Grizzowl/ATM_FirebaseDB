@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D83DBD952890160C002F17E8 /* UserLoginDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D83DBD942890160C002F17E8 /* UserLoginDetailsView.swift */; };
+		D83DBD9C28902F0E002F17E8 /* HomePageControllerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D83DBD9B28902F0E002F17E8 /* HomePageControllerView.swift */; };
 		D88C7F0F288A93D8009C4064 /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D88C7F0E288A93D8009C4064 /* LoginModel.swift */; };
 		D8B0DC9D288850A800F42273 /* ATM_FirebaseDBApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8B0DC9C288850A800F42273 /* ATM_FirebaseDBApp.swift */; };
 		D8B0DCA1288850A900F42273 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D8B0DCA0288850A900F42273 /* Assets.xcassets */; };
@@ -19,6 +21,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D83DBD942890160C002F17E8 /* UserLoginDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLoginDetailsView.swift; sourceTree = "<group>"; };
+		D83DBD9B28902F0E002F17E8 /* HomePageControllerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageControllerView.swift; sourceTree = "<group>"; };
 		D88C7F0E288A93D8009C4064 /* LoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
 		D8B0DC99288850A800F42273 /* ATM_FirebaseDB.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ATM_FirebaseDB.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8B0DC9C288850A800F42273 /* ATM_FirebaseDBApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ATM_FirebaseDBApp.swift; sourceTree = "<group>"; };
@@ -42,6 +46,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D83DBD93289014C0002F17E8 /* Registration  */ = {
+			isa = PBXGroup;
+			children = (
+				D8B0FA042889238700F250E7 /* RegisterNewUserView.swift */,
+				D83DBD942890160C002F17E8 /* UserLoginDetailsView.swift */,
+			);
+			path = "Registration ";
+			sourceTree = "<group>";
+		};
+		D83DBD96289026DF002F17E8 /* Dashboard */ = {
+			isa = PBXGroup;
+			children = (
+				D83DBD9B28902F0E002F17E8 /* HomePageControllerView.swift */,
+			);
+			path = Dashboard;
+			sourceTree = "<group>";
+		};
 		D8B0DC90288850A700F42273 = {
 			isa = PBXGroup;
 			children = (
@@ -98,7 +119,8 @@
 			isa = PBXGroup;
 			children = (
 				D8B0FA022889225A00F250E7 /* LoginView.swift */,
-				D8B0FA042889238700F250E7 /* RegisterNewUserView.swift */,
+				D83DBD93289014C0002F17E8 /* Registration  */,
+				D83DBD96289026DF002F17E8 /* Dashboard */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -190,8 +212,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D83DBD952890160C002F17E8 /* UserLoginDetailsView.swift in Sources */,
 				D88C7F0F288A93D8009C4064 /* LoginModel.swift in Sources */,
 				D8B0FA032889225A00F250E7 /* LoginView.swift in Sources */,
+				D83DBD9C28902F0E002F17E8 /* HomePageControllerView.swift in Sources */,
 				D8B0FA052889238700F250E7 /* RegisterNewUserView.swift in Sources */,
 				D8B0DC9D288850A800F42273 /* ATM_FirebaseDBApp.swift in Sources */,
 			);
