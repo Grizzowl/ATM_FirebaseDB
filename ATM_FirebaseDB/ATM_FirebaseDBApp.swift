@@ -37,7 +37,7 @@ struct ApplicationSwitcher: View {
     
     var body: some View {
         if (vm.isLoggedIn) {
-            //HomeScreenView() [WIP] Set up a home screen for the user linked to firebase
+            HomePageControllerView() //[WIP] Set up a home screen for the user linked to firebase
         } else {
             LoginView()
         }
