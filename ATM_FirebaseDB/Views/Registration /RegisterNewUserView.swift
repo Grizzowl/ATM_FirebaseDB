@@ -16,6 +16,9 @@ struct RegisterNewUserView: View {
     @State var emailTextFieldText: String = ""
     @State private var date = Date()
     
+    @State private var termsAndConditionsCheckbox = false
+    @State private var PrivacyPolicyCheckbox = false
+    
     
     let lightGreen = Color("LightGreen")
     
@@ -70,8 +73,31 @@ struct RegisterNewUserView: View {
                 }
                 .padding()
                 
-               
+                // add a navlink to a PDF of the privacy policy and T&Cs +make both checkboxes mandatory
+                HStack{
+                    Image(systemName: termsAndConditionsCheckbox ? "checkmark.square.fill" : "square")
+                                .foregroundColor(termsAndConditionsCheckbox ? (lightGreen) : Color.secondary)
+                                .onTapGesture {
+                                    self.termsAndConditionsCheckbox.toggle()
+                                }
+                    Text("I Agree to the T&Cs of Grizz Bank Limited")
+                        .padding(0.5)
+                }
+                
+                HStack{
+                    Image(systemName: PrivacyPolicyCheckbox ? "checkmark.square.fill" : "square")
+                                .foregroundColor(PrivacyPolicyCheckbox ? (lightGreen) : Color.secondary)
+                                .onTapGesture {
+                                    self.PrivacyPolicyCheckbox.toggle()
+                                }
+                    Text("I Agree to the storage and handling of your data in accordance with our Privacy Policy")
+                        .padding()
+                }
+                
+                
             }
+            
+            // add a dead button untill all fields are fill in properly
             Button(action: saveButtonPressed, label: {
                 Text("Save".uppercased())
                     .foregroundColor(.white)
