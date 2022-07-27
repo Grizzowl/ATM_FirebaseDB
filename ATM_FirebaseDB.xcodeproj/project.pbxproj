@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D809E2F6289139E600E862A7 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D809E2F5289139E600E862A7 /* CardView.swift */; };
 		D83DBD952890160C002F17E8 /* UserLoginDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D83DBD942890160C002F17E8 /* UserLoginDetailsView.swift */; };
 		D83DBD9C28902F0E002F17E8 /* HomePageControllerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D83DBD9B28902F0E002F17E8 /* HomePageControllerView.swift */; };
 		D88C7F0F288A93D8009C4064 /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D88C7F0E288A93D8009C4064 /* LoginModel.swift */; };
@@ -21,6 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D809E2F5289139E600E862A7 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		D83DBD942890160C002F17E8 /* UserLoginDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLoginDetailsView.swift; sourceTree = "<group>"; };
 		D83DBD9B28902F0E002F17E8 /* HomePageControllerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageControllerView.swift; sourceTree = "<group>"; };
 		D88C7F0E288A93D8009C4064 /* LoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
@@ -59,6 +61,7 @@
 			isa = PBXGroup;
 			children = (
 				D83DBD9B28902F0E002F17E8 /* HomePageControllerView.swift */,
+				D809E2F5289139E600E862A7 /* CardView.swift */,
 			);
 			path = Dashboard;
 			sourceTree = "<group>";
@@ -212,6 +215,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D809E2F6289139E600E862A7 /* CardView.swift in Sources */,
 				D83DBD952890160C002F17E8 /* UserLoginDetailsView.swift in Sources */,
 				D88C7F0F288A93D8009C4064 /* LoginModel.swift in Sources */,
 				D8B0FA032889225A00F250E7 /* LoginView.swift in Sources */,
