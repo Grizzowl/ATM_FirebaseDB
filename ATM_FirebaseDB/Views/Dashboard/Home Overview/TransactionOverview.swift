@@ -10,7 +10,6 @@ import SwiftUI
 struct TransactionOverview: View {
     var body: some View {
         VStack(spacing: -40){
-            TransactionsHeader()
             LazyVStack {
                 ForEach(0..<10, id: \.self) { item in
                     TransactionHistoryRow()

@@ -17,10 +17,15 @@ struct HomeScreenView: View {
             ZStack {
                 Color(.white)
                     .edgesIgnoringSafeArea(.all)
-                ScrollView(.vertical) {
+                VStack{
                     CardView()
-                     .padding()
-                    TransactionOverview()
+                        .padding()
+                    VStack(spacing: -610){
+                        TransactionsHeader()
+                        ScrollView(.vertical) {
+                            TransactionOverview()
+                        }
+                    }
                 }
                 .navigationTitle(Text("My Account"))
             }

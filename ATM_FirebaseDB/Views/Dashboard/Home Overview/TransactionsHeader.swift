@@ -22,7 +22,7 @@ struct TransactionsHeader: View {
                 .font(.caption)
         }
         .padding(20)
-        .padding(.bottom, 30)
+        .padding(.bottom, 600)
         .foregroundColor(.white)
         .background(lightGreen)
         .cornerRadius(15)
