@@ -13,7 +13,16 @@ import SwiftUI
 
 struct HomePageControllerView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        TabView {
+            HomeScreenView()
+                .tabItem { Label("Home", systemImage: "house") }
+            VStack {/*screen des */}
+                .tabItem { Label("Card", systemImage: "creditcard") }
+            VStack {/*screen des */}
+                .tabItem { Label("Transact", systemImage: "banknote") }
+            VStack {/*screen des */}
+                .tabItem { Label("Profile", systemImage: "person") }
+        }
     }
 }
 
