@@ -1,5 +1,5 @@
 //
-//  HomeScreenOverview.swift
+//  TransactionOverview.swift
 //  ATM_FirebaseDB
 //
 //  Created by Grizzowl on 2022/07/27.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct HomeScreenOverview: View {
+struct TransactionOverview: View {
     var body: some View {
         VStack(spacing: -40){
             TransactionsHeader()
@@ -23,8 +23,8 @@ struct HomeScreenOverview: View {
     }
 }
 
-struct HomeScreenOverview_Previews: PreviewProvider {
+struct TransactionOverview_Previews: PreviewProvider {
     static var previews: some View {
-        HomeScreenOverview()
+        TransactionOverview()
     }
 }
