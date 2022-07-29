@@ -12,6 +12,7 @@
 		D809E2FD289157D100E862A7 /* TransactionsHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = D809E2FC289157D100E862A7 /* TransactionsHeader.swift */; };
 		D83DBD952890160C002F17E8 /* UserLoginDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D83DBD942890160C002F17E8 /* UserLoginDetailsView.swift */; };
 		D83DBD9C28902F0E002F17E8 /* HomePageControllerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D83DBD9B28902F0E002F17E8 /* HomePageControllerView.swift */; };
+		D84B79392893B22500DDE36B /* CardInformationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D84B79382893B22500DDE36B /* CardInformationView.swift */; };
 		D88C7F0F288A93D8009C4064 /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D88C7F0E288A93D8009C4064 /* LoginModel.swift */; };
 		D8992E412891796200558A98 /* HomeScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8992E402891796200558A98 /* HomeScreenView.swift */; };
 		D8992E43289179B200558A98 /* TransactionOverview.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8992E42289179B200558A98 /* TransactionOverview.swift */; };
@@ -24,6 +25,9 @@
 		D8B0FA032889225A00F250E7 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8B0FA022889225A00F250E7 /* LoginView.swift */; };
 		D8B0FA052889238700F250E7 /* RegisterNewUserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8B0FA042889238700F250E7 /* RegisterNewUserView.swift */; };
 		D8E4341A289255F200FED1A6 /* CardTemplateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8E43419289255F200FED1A6 /* CardTemplateView.swift */; };
+		D8E4341E2892765400FED1A6 /* CardDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8E4341D2892765400FED1A6 /* CardDetailsView.swift */; };
+		D8E43422289288CF00FED1A6 /* UserCardDetailsHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8E43421289288CF00FED1A6 /* UserCardDetailsHeader.swift */; };
+		D8E4342628928FE900FED1A6 /* HelpDeskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8E4342528928FE900FED1A6 /* HelpDeskView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +36,7 @@
 		D809E2FC289157D100E862A7 /* TransactionsHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsHeader.swift; sourceTree = "<group>"; };
 		D83DBD942890160C002F17E8 /* UserLoginDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLoginDetailsView.swift; sourceTree = "<group>"; };
 		D83DBD9B28902F0E002F17E8 /* HomePageControllerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageControllerView.swift; sourceTree = "<group>"; };
+		D84B79382893B22500DDE36B /* CardInformationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardInformationView.swift; sourceTree = "<group>"; };
 		D88C7F0E288A93D8009C4064 /* LoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
 		D8992E402891796200558A98 /* HomeScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenView.swift; sourceTree = "<group>"; };
 		D8992E42289179B200558A98 /* TransactionOverview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionOverview.swift; sourceTree = "<group>"; };
@@ -43,6 +48,9 @@
 		D8B0FA022889225A00F250E7 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		D8B0FA042889238700F250E7 /* RegisterNewUserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterNewUserView.swift; sourceTree = "<group>"; };
 		D8E43419289255F200FED1A6 /* CardTemplateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardTemplateView.swift; sourceTree = "<group>"; };
+		D8E4341D2892765400FED1A6 /* CardDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardDetailsView.swift; sourceTree = "<group>"; };
+		D8E43421289288CF00FED1A6 /* UserCardDetailsHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCardDetailsHeader.swift; sourceTree = "<group>"; };
+		D8E4342528928FE900FED1A6 /* HelpDeskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpDeskView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,14 +87,13 @@
 			path = "Registration ";
 			sourceTree = "<group>";
 		};
-		D83DBD96289026DF002F17E8 /* Dashboard */ = {
+		D83DBD96289026DF002F17E8 /* Home (Tab Menu) */ = {
 			isa = PBXGroup;
 			children = (
 				D83DBD9B28902F0E002F17E8 /* HomePageControllerView.swift */,
 				D809E2F9289156EE00E862A7 /* Home Overview */,
-				D8E434182892555000FED1A6 /* CardScreenView */,
 			);
-			path = Dashboard;
+			path = "Home (Tab Menu)";
 			sourceTree = "<group>";
 		};
 		D8B0DC90288850A700F42273 = {
@@ -146,7 +153,10 @@
 			children = (
 				D8B0FA022889225A00F250E7 /* LoginView.swift */,
 				D83DBD93289014C0002F17E8 /* Registration  */,
-				D83DBD96289026DF002F17E8 /* Dashboard */,
+				D83DBD96289026DF002F17E8 /* Home (Tab Menu) */,
+				D8E434182892555000FED1A6 /* Card (Tab Menu) */,
+				D8E4341B289267D900FED1A6 /* Transactions (Tab Menu) */,
+				D8E4341C289267E900FED1A6 /* Profile (Tab Menu) */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -160,12 +170,30 @@
 			path = Assets;
 			sourceTree = "<group>";
 		};
-		D8E434182892555000FED1A6 /* CardScreenView */ = {
+		D8E434182892555000FED1A6 /* Card (Tab Menu) */ = {
 			isa = PBXGroup;
 			children = (
+				D8E4341D2892765400FED1A6 /* CardDetailsView.swift */,
 				D8E43419289255F200FED1A6 /* CardTemplateView.swift */,
+				D8E43421289288CF00FED1A6 /* UserCardDetailsHeader.swift */,
+				D84B79382893B22500DDE36B /* CardInformationView.swift */,
+				D8E4342528928FE900FED1A6 /* HelpDeskView.swift */,
 			);
-			path = CardScreenView;
+			path = "Card (Tab Menu)";
+			sourceTree = "<group>";
+		};
+		D8E4341B289267D900FED1A6 /* Transactions (Tab Menu) */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Transactions (Tab Menu)";
+			sourceTree = "<group>";
+		};
+		D8E4341C289267E900FED1A6 /* Profile (Tab Menu) */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Profile (Tab Menu)";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -250,14 +278,18 @@
 				D8992E43289179B200558A98 /* TransactionOverview.swift in Sources */,
 				D83DBD952890160C002F17E8 /* UserLoginDetailsView.swift in Sources */,
 				D88C7F0F288A93D8009C4064 /* LoginModel.swift in Sources */,
+				D8E43422289288CF00FED1A6 /* UserCardDetailsHeader.swift in Sources */,
 				D8B0FA032889225A00F250E7 /* LoginView.swift in Sources */,
 				D83DBD9C28902F0E002F17E8 /* HomePageControllerView.swift in Sources */,
 				D8E4341A289255F200FED1A6 /* CardTemplateView.swift in Sources */,
 				D8B0FA052889238700F250E7 /* RegisterNewUserView.swift in Sources */,
+				D8E4341E2892765400FED1A6 /* CardDetailsView.swift in Sources */,
 				D8992E412891796200558A98 /* HomeScreenView.swift in Sources */,
 				D809E2F82891508800E862A7 /* TransactionHistoryRow.swift in Sources */,
+				D8E4342628928FE900FED1A6 /* HelpDeskView.swift in Sources */,
 				D8B0DC9D288850A800F42273 /* ATM_FirebaseDBApp.swift in Sources */,
 				D809E2FD289157D100E862A7 /* TransactionsHeader.swift in Sources */,
+				D84B79392893B22500DDE36B /* CardInformationView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
