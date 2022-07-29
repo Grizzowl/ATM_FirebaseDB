@@ -16,7 +16,7 @@ struct HomePageControllerView: View {
         TabView {
             HomeScreenView()
                 .tabItem { Label("Home", systemImage: "house") }
-            VStack {/*screen des */}
+            CardDetailsView()
                 .tabItem { Label("Card", systemImage: "creditcard") }
             VStack {/*screen des */}
                 .tabItem { Label("Transact", systemImage: "banknote") }
