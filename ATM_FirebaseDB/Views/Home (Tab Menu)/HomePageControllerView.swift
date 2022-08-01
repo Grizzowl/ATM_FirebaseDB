@@ -18,7 +18,7 @@ struct HomePageControllerView: View {
                 .tabItem { Label("Home", systemImage: "house") }
             CardDetailsView()
                 .tabItem { Label("Card", systemImage: "creditcard") }
-            VStack {/*screen des */}
+            TransactionView()
                 .tabItem { Label("Transact", systemImage: "banknote") }
             VStack {/*screen des */}
                 .tabItem { Label("Profile", systemImage: "person") }
