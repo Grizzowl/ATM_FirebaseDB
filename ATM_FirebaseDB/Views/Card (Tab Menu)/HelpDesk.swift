@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct HelpDeskView: View {
+struct HelpDesk: View {
     var body: some View {
         List {
             Text("Customer Service landline")
@@ -31,6 +31,6 @@ struct HelpDeskView: View {
 
 struct HelpDeskView_Previews: PreviewProvider {
     static var previews: some View {
-        HelpDeskView()
+        HelpDesk()
     }
 }

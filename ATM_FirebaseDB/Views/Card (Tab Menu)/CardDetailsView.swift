@@ -16,12 +16,12 @@ struct CardDetailsView: View {
                 Color(.white)
                     .edgesIgnoringSafeArea(.all)
                 VStack{
-                    CardTemplateView()
+                    CardTemplate()
                         .padding()
                     VStack(spacing: -610){
                         UserCardDetailsHeader()
                         VStack {
-                            CardInformationView()
+                            CardInformation()
                         }
                     }
                 }

@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct CardInformationView: View {
+struct CardInformation: View {
     
     @State var cardNumber:String = "0000 0000 0000 0000"
     @State var expDate:String = "02/23"
@@ -95,7 +95,7 @@ struct CardInformationView: View {
                     }
                     
                     NavigationLink(
-                    destination: HelpDeskView(),
+                    destination: HelpDesk(),
                     label: {
                         HStack{
                             Image(systemName: "creditcard.trianglebadge.exclamationmark")
@@ -114,7 +114,7 @@ struct CardInformationView: View {
                     })
                         
                         NavigationLink(
-                        destination: HelpDeskView(),
+                        destination: HelpDesk(),
                         label: {
                             HStack{
                                 Image(systemName: "rectangle.badge.plus")
@@ -149,6 +149,6 @@ struct CardInformationView: View {
 
 struct CardInformationView_Previews: PreviewProvider {
     static var previews: some View {
-        CardInformationView()
+        CardInformation()
     }
 }

@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct CardTemplateView: View {
+struct CardTemplate: View {
     
     let darkGreen = Color("DarkGreen")
     let lightGreen = Color("LightGreen")
@@ -90,6 +90,6 @@ struct CardTemplateView: View {
 
 struct CardTemplateView_Previews: PreviewProvider {
     static var previews: some View {
-        CardTemplateView()
+        CardTemplate()
     }
 }
