@@ -27,6 +27,10 @@
 		D8B0DCB02888541C00F42273 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = D8B0DCAF2888541C00F42273 /* FirebaseFirestore */; };
 		D8B0FA032889225A00F250E7 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8B0FA022889225A00F250E7 /* LoginView.swift */; };
 		D8B0FA052889238700F250E7 /* RegisterNewUserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8B0FA042889238700F250E7 /* RegisterNewUserView.swift */; };
+		D8BD08612898FFD500A49373 /* UserProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8BD08602898FFD500A49373 /* UserProfileView.swift */; };
+		D8BD08632898FFFA00A49373 /* UserProfileHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8BD08622898FFFA00A49373 /* UserProfileHeader.swift */; };
+		D8BD08652899053400A49373 /* UserProfileDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8BD08642899053400A49373 /* UserProfileDetails.swift */; };
+		D8BD08672899237300A49373 /* EditPassword.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8BD08662899237300A49373 /* EditPassword.swift */; };
 		D8E4341A289255F200FED1A6 /* CardTemplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8E43419289255F200FED1A6 /* CardTemplate.swift */; };
 		D8E4341E2892765400FED1A6 /* CardDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8E4341D2892765400FED1A6 /* CardDetailsView.swift */; };
 		D8E43422289288CF00FED1A6 /* UserCardDetailsHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8E43421289288CF00FED1A6 /* UserCardDetailsHeader.swift */; };
@@ -53,6 +57,10 @@
 		D8B0DCAA2888532500F42273 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		D8B0FA022889225A00F250E7 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		D8B0FA042889238700F250E7 /* RegisterNewUserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterNewUserView.swift; sourceTree = "<group>"; };
+		D8BD08602898FFD500A49373 /* UserProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileView.swift; sourceTree = "<group>"; };
+		D8BD08622898FFFA00A49373 /* UserProfileHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileHeader.swift; sourceTree = "<group>"; };
+		D8BD08642899053400A49373 /* UserProfileDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileDetails.swift; sourceTree = "<group>"; };
+		D8BD08662899237300A49373 /* EditPassword.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditPassword.swift; sourceTree = "<group>"; };
 		D8E43419289255F200FED1A6 /* CardTemplate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardTemplate.swift; sourceTree = "<group>"; };
 		D8E4341D2892765400FED1A6 /* CardDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardDetailsView.swift; sourceTree = "<group>"; };
 		D8E43421289288CF00FED1A6 /* UserCardDetailsHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCardDetailsHeader.swift; sourceTree = "<group>"; };
@@ -201,6 +209,10 @@
 		D8E4341C289267E900FED1A6 /* Profile (Tab Menu) */ = {
 			isa = PBXGroup;
 			children = (
+				D8BD08602898FFD500A49373 /* UserProfileView.swift */,
+				D8BD08622898FFFA00A49373 /* UserProfileHeader.swift */,
+				D8BD08642899053400A49373 /* UserProfileDetails.swift */,
+				D8BD08662899237300A49373 /* EditPassword.swift */,
 			);
 			path = "Profile (Tab Menu)";
 			sourceTree = "<group>";
@@ -288,6 +300,7 @@
 				D83DBD952890160C002F17E8 /* UserLoginDetailsView.swift in Sources */,
 				D88C7F0F288A93D8009C4064 /* LoginModel.swift in Sources */,
 				D8E43422289288CF00FED1A6 /* UserCardDetailsHeader.swift in Sources */,
+				D8BD08652899053400A49373 /* UserProfileDetails.swift in Sources */,
 				D8B0FA032889225A00F250E7 /* LoginView.swift in Sources */,
 				D83DBD9C28902F0E002F17E8 /* HomePageControllerView.swift in Sources */,
 				D86390FA2897FDD4003DC263 /* PaymentConfirmation.swift in Sources */,
@@ -298,9 +311,12 @@
 				D809E2F82891508800E862A7 /* TransactionHistoryRow.swift in Sources */,
 				D8E4342628928FE900FED1A6 /* HelpDesk.swift in Sources */,
 				D86390F42897DCC0003DC263 /* TransactionView.swift in Sources */,
+				D8BD08632898FFFA00A49373 /* UserProfileHeader.swift in Sources */,
+				D8BD08612898FFD500A49373 /* UserProfileView.swift in Sources */,
 				D86390F62897E195003DC263 /* BeneficiaryDetails.swift in Sources */,
 				D8B0DC9D288850A800F42273 /* ATM_FirebaseDBApp.swift in Sources */,
 				D809E2FD289157D100E862A7 /* TransactionsHeader.swift in Sources */,
+				D8BD08672899237300A49373 /* EditPassword.swift in Sources */,
 				D84B79392893B22500DDE36B /* CardInformation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
