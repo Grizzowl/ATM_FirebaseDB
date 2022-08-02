@@ -25,7 +25,7 @@ struct BeneficiaryDetails: View {
             
             VStack{
                 
-                Text("Account Details")
+                Text("Make A Payment")
                     .foregroundColor(lightGreen)
                     .bold()
                     .frame(width: 400, height: 30, alignment: .leading)
