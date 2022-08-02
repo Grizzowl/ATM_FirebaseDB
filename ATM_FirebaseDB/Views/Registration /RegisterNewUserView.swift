@@ -98,7 +98,8 @@ struct RegisterNewUserView: View {
             }
             
             // add a dead button untill all fields are fill in properly
-            Button(action: saveButtonPressed, label: {
+            Button(action: saveButtonPressed,
+                   label: {
                 Text("Save".uppercased())
                     .foregroundColor(.white)
                     .font(.headline)
