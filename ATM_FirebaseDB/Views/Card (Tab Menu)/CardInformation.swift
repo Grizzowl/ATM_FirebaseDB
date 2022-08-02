@@ -107,6 +107,10 @@ struct CardInformation: View {
                                 .font(.headline)
                                 .cornerRadius(15)
                             Spacer()
+                            
+                            Image(systemName: "chevron.right")
+                                .resizable()
+                                .frame(width: 10, height: 17)
                         }
                         .padding(.bottom)
                         .padding(.top)
@@ -125,7 +129,12 @@ struct CardInformation: View {
                                     .foregroundColor(.black)
                                     .font(.headline)
                                     .cornerRadius(15)
+                                
                                 Spacer()
+                                
+                                Image(systemName: "chevron.right")
+                                    .resizable()
+                                    .frame(width: 10, height: 17)
                             }
                             .padding(.bottom)
                             .padding(.top)
