@@ -41,10 +41,10 @@ struct UserLoginDetailsView: View {
             
             VStack {
                 //place holder image for bank logo
-                Image(systemName: "arrow.triangle.2.circlepath")
+                Image("GrizzBank_APP_LOGO")
                     .resizable()
-                    .frame(width: 50, height: 50)
-                    .padding(50)
+                    .frame(width: 150, height: 150)
+                    .padding(5)
                 
                 Text("Create Your Login Details")
                     .font(.title)
