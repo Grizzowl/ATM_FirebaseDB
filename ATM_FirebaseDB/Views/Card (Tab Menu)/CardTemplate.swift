@@ -46,12 +46,19 @@ struct CardTemplate: View {
                 Spacer()
                 
                 VStack{
-                    Image("visaLogo") // Banklogo
-                        .resizable()
-                        .aspectRatio(contentMode: .fill)
-                        .frame(width: 40, height: 40)
-                        .foregroundColor(.white)
-                        .padding()
+                    ZStack{
+                        Image("GrizzBank_APP_LOGO") // Banklogo
+                            .resizable()
+                            .aspectRatio(contentMode: .fill)
+                            .frame(width: 50, height: 50)
+                            .padding(.top)
+                        
+                        Text("Grizz Bank Ltd")
+                            .font(.subheadline)
+                            .foregroundColor(.black)
+                            .padding(.top)
+                    }
+                    
                     
                     Spacer()
                     
