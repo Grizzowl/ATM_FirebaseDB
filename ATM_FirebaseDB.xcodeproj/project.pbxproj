@@ -13,6 +13,7 @@
 		D83DBD952890160C002F17E8 /* UserLoginDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D83DBD942890160C002F17E8 /* UserLoginDetailsView.swift */; };
 		D83DBD9C28902F0E002F17E8 /* HomePageControllerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D83DBD9B28902F0E002F17E8 /* HomePageControllerView.swift */; };
 		D84B79392893B22500DDE36B /* CardInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D84B79382893B22500DDE36B /* CardInformation.swift */; };
+		D84F2AE3289BE20F009B4429 /* RegistrationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D84F2AE2289BE20E009B4429 /* RegistrationModel.swift */; };
 		D86390F42897DCC0003DC263 /* TransactionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D86390F32897DCC0003DC263 /* TransactionView.swift */; };
 		D86390F62897E195003DC263 /* BeneficiaryDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = D86390F52897E195003DC263 /* BeneficiaryDetails.swift */; };
 		D86390FA2897FDD4003DC263 /* PaymentConfirmation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D86390F92897FDD4003DC263 /* PaymentConfirmation.swift */; };
@@ -44,6 +45,7 @@
 		D83DBD942890160C002F17E8 /* UserLoginDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLoginDetailsView.swift; sourceTree = "<group>"; };
 		D83DBD9B28902F0E002F17E8 /* HomePageControllerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageControllerView.swift; sourceTree = "<group>"; };
 		D84B79382893B22500DDE36B /* CardInformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardInformation.swift; sourceTree = "<group>"; };
+		D84F2AE2289BE20E009B4429 /* RegistrationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationModel.swift; sourceTree = "<group>"; };
 		D86390F32897DCC0003DC263 /* TransactionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionView.swift; sourceTree = "<group>"; };
 		D86390F52897E195003DC263 /* BeneficiaryDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeneficiaryDetails.swift; sourceTree = "<group>"; };
 		D86390F92897FDD4003DC263 /* PaymentConfirmation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentConfirmation.swift; sourceTree = "<group>"; };
@@ -151,6 +153,7 @@
 			isa = PBXGroup;
 			children = (
 				D88C7F0E288A93D8009C4064 /* LoginModel.swift */,
+				D84F2AE2289BE20E009B4429 /* RegistrationModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -309,6 +312,7 @@
 				D8E4341E2892765400FED1A6 /* CardDetailsView.swift in Sources */,
 				D8992E412891796200558A98 /* HomeScreenView.swift in Sources */,
 				D809E2F82891508800E862A7 /* TransactionHistoryRow.swift in Sources */,
+				D84F2AE3289BE20F009B4429 /* RegistrationModel.swift in Sources */,
 				D8E4342628928FE900FED1A6 /* HelpDesk.swift in Sources */,
 				D86390F42897DCC0003DC263 /* TransactionView.swift in Sources */,
 				D8BD08632898FFFA00A49373 /* UserProfileHeader.swift in Sources */,
