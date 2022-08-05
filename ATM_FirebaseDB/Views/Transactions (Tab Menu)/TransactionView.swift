@@ -18,14 +18,14 @@ struct TransactionView: View {
                     .edgesIgnoringSafeArea(.all)
 
                     VStack(spacing: -610){
-
+                        ScrollView{
                             BeneficiaryDetails()
-                        
+                        }
                     }
-                
-                .navigationBarHidden(true)
             }
-            
+            .navigationViewStyle(.stack)
+            .navigationBarBackButtonHidden(true)
+            .navigationBarHidden(true)
         }
     }
 }

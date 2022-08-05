@@ -25,7 +25,9 @@ struct UserProfileView: View {
                 }
                 
             }
-            .navigationTitle(Text("My Profile"))
+            .navigationViewStyle(.stack)
+            .navigationBarBackButtonHidden(true)
+            .navigationBarHidden(true)
         }
     }
 }

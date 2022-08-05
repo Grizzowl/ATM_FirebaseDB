@@ -25,7 +25,9 @@ struct CardDetailsView: View {
                         }
                     }
                 }
-                .navigationTitle(Text("My Card"))
+                .navigationViewStyle(.stack)
+                .navigationBarBackButtonHidden(true)
+                .navigationBarHidden(true)
             }
         }
     }

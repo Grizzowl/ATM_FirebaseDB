@@ -8,8 +8,7 @@
 import SwiftUI
 
 struct HomeScreenView: View {
-    
-    let backgroundGreen = Color("BackgroundGreen")
+
     
     var body: some View {
         
@@ -27,9 +26,12 @@ struct HomeScreenView: View {
                         }
                     }
                 }
-                .navigationTitle(Text("My Account"))
+                .navigationViewStyle(.stack)
+                .navigationBarBackButtonHidden(true)
+                .navigationBarHidden(true)
             }
         }
+        
     }
 }
 
