@@ -22,14 +22,14 @@ struct CardInformation: View {
         NavigationView {
             ZStack{
                 lightGreen
-                    .frame(width: .infinity, height: 450)
+                    .frame(height: 450)
                 
                 VStack {
                     Text("Card Number")
                         .bold()
                     TextField("Card Number", text: $cardNumber)
                         .padding()
-                        .frame(width: .infinity, height: 50)
+                        .frame(height: 50)
                         .background(Color.black.opacity(0.05))
                         .cornerRadius(15)
                         .padding(1)
@@ -41,14 +41,14 @@ struct CardInformation: View {
                             if showExpDateField == false {
                                 SecureField("Password", text: $expDate)
                                     .padding()
-                                    .frame(width: .infinity, height: 50)
+                                    .frame(height: 50)
                                     .background(Color.black.opacity(0.05))
                                     .cornerRadius(15)
                                     .padding(1)
                             } else {
                                 TextField("Password", text: $expDate)
                                     .padding()
-                                    .frame(width: .infinity, height: 50)
+                                    .frame(height: 50)
                                     .background(Color.black.opacity(0.05))
                                     .cornerRadius(15)
                                     .padding(1)
@@ -71,14 +71,14 @@ struct CardInformation: View {
                             if showCvvField == false {
                                 SecureField("Password", text: $cvvNumber)
                                     .padding()
-                                    .frame(width: .infinity, height: 50)
+                                    .frame(height: 50)
                                     .background(Color.black.opacity(0.05))
                                     .cornerRadius(15)
                                     .padding(1)
                             } else {
                                 TextField("Password", text: $cvvNumber)
                                     .padding()
-                                    .frame(width: .infinity, height: 50)
+                                    .frame(height: 50)
                                     .background(Color.black.opacity(0.05))
                                     .cornerRadius(15)
                                     .padding(1)
