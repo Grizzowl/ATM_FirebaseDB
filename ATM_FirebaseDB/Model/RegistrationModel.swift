@@ -6,12 +6,11 @@
 //
 
 import Foundation
-import Firebase
-import FirebaseCore
-import Combine
 
-struct RegistrationDetails {
+
+struct RegistrationDetails: Identifiable {
     
+    var id: String
     var name: String
     var surname: String
     var userIDNumber: String
@@ -22,14 +21,14 @@ struct RegistrationDetails {
     var username: String
     var password: String
     
-    var accountNumber: String
-    var balance: String
-    var cardNumber: String
+    var accountNumber: Int
+    var balance: Double
+    var cardNumber: Int
     var expDate: String
-    var cvvNumber: String
+    var cvvNumber: Int
     var transactionPaymentReference: String
-    var transactionHistoryAmount: String
-    var transactionHistorydate: Date
+    var transactionHistoryAmount: Double
+    var transactionHistoryDate: Date
     
 }
 
