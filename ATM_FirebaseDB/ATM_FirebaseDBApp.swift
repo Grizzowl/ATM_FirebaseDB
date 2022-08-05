@@ -7,14 +7,15 @@
 
 import SwiftUI
 import FirebaseCore
+import Firebase
 
 @main
 struct ATM_FirebaseDBApp: App {
     
     //Firebase setup
-//    init() {
-//        FirebaseApp.configure()
-//    }
+    init() {
+        FirebaseApp.configure()
+    }
     
     @StateObject var userStateViewModel = UserStateViewModel()
     
