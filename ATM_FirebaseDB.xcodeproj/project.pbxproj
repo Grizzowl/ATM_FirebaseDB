@@ -33,6 +33,7 @@
 		D8BD08632898FFFA00A49373 /* UserProfileHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8BD08622898FFFA00A49373 /* UserProfileHeader.swift */; };
 		D8BD08652899053400A49373 /* UserProfileDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8BD08642899053400A49373 /* UserProfileDetails.swift */; };
 		D8BD08672899237300A49373 /* EditPassword.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8BD08662899237300A49373 /* EditPassword.swift */; };
+		D8C9F5EA289D30B700A6FEE8 /* CreateNewUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8C9F5E9289D30B700A6FEE8 /* CreateNewUser.swift */; };
 		D8E4341A289255F200FED1A6 /* CardTemplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8E43419289255F200FED1A6 /* CardTemplate.swift */; };
 		D8E4341E2892765400FED1A6 /* CardDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8E4341D2892765400FED1A6 /* CardDetailsView.swift */; };
 		D8E43422289288CF00FED1A6 /* UserCardDetailsHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8E43421289288CF00FED1A6 /* UserCardDetailsHeader.swift */; };
@@ -65,6 +66,7 @@
 		D8BD08622898FFFA00A49373 /* UserProfileHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileHeader.swift; sourceTree = "<group>"; };
 		D8BD08642899053400A49373 /* UserProfileDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileDetails.swift; sourceTree = "<group>"; };
 		D8BD08662899237300A49373 /* EditPassword.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditPassword.swift; sourceTree = "<group>"; };
+		D8C9F5E9289D30B700A6FEE8 /* CreateNewUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateNewUser.swift; sourceTree = "<group>"; };
 		D8E43419289255F200FED1A6 /* CardTemplate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardTemplate.swift; sourceTree = "<group>"; };
 		D8E4341D2892765400FED1A6 /* CardDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardDetailsView.swift; sourceTree = "<group>"; };
 		D8E43421289288CF00FED1A6 /* UserCardDetailsHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCardDetailsHeader.swift; sourceTree = "<group>"; };
@@ -164,6 +166,7 @@
 			isa = PBXGroup;
 			children = (
 				D84F2AE4289C01B8009B4429 /* UserViewModel.swift */,
+				D8C9F5E9289D30B700A6FEE8 /* CreateNewUser.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -312,6 +315,7 @@
 				D86390FA2897FDD4003DC263 /* PaymentConfirmation.swift in Sources */,
 				D8E4341A289255F200FED1A6 /* CardTemplate.swift in Sources */,
 				D8B0FA052889238700F250E7 /* RegisterNewUserView.swift in Sources */,
+				D8C9F5EA289D30B700A6FEE8 /* CreateNewUser.swift in Sources */,
 				D8E4341E2892765400FED1A6 /* CardDetailsView.swift in Sources */,
 				D8992E412891796200558A98 /* HomeScreenView.swift in Sources */,
 				D809E2F82891508800E862A7 /* TransactionHistoryRow.swift in Sources */,
