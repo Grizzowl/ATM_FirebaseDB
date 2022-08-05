@@ -9,6 +9,8 @@ import SwiftUI
 
 struct LoginView: View {
     
+    @EnvironmentObject var uSVM: UserStateViewModel
+    
     @State private var userEmail = ""
     @State private var password = ""
     @State private var wrongUserEmail = 0
@@ -103,8 +105,7 @@ struct LoginView: View {
                 
                 Button("Sign In") {
                     
-                    //Auth user code
-                    // WIP need set up new user reg view and link firebase
+                    uSVM.logIn(email: userEmail, password: password)
                     
                     
                 }
