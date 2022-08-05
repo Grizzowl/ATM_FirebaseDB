@@ -6,11 +6,15 @@
 //
 
 import Foundation
+import FirebaseAuth
 
 
 class UserStateViewModel: ObservableObject {
     
+    let auth = Auth.auth()
+    
     @Published var isLoggedIn = false
+    @Published var signedIn = false
     
     func signIn() {
         isLoggedIn = true
@@ -19,4 +23,22 @@ class UserStateViewModel: ObservableObject {
     func signOut() {
         isLoggedIn = false
     }
+    
+    func logIn(email: String, password: String) {
+        auth.signIn(withEmail: email, password: password) { [self] result, err in
+            if let err = err {
+                print("Failed to login user:", err)
+                return
+            } else{
+                self.signIn()
+                print("Successfully logged in as user: \(result?.user.uid ?? "")")
+                
+            }
+            
+            
+        }
+    }
+    
 }
+
+
