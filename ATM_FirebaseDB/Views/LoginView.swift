@@ -9,9 +9,9 @@ import SwiftUI
 
 struct LoginView: View {
     
-    @State private var username = ""
+    @State private var userEmail = ""
     @State private var password = ""
-    @State private var wrongUsername = 0
+    @State private var wrongUserEmail = 0
     @State private var wrongPassword = 0
     @State private var showLoginScreen = false
     @State private var wrongUsernameInput = false
@@ -24,7 +24,7 @@ struct LoginView: View {
     let lightGreen = Color("LightGreen")
     let gold = Color("Gold")
     
-    //Nav to home screen if username and pass are true
+    //Nav to home screen if userEmail and pass are true
     var body: some View {
         
         ZStack{
@@ -61,13 +61,13 @@ struct LoginView: View {
                     .padding()
                 
                 //user login
-                TextField("Username", text: $username)
+                TextField("Email", text: $userEmail)
                     .padding()
                     .frame(width: 300, height: 50)
                     .background(Color.black.opacity(0.05))
                     .cornerRadius(15)
                     .padding(1)
-                    .border(.red, width: CGFloat(wrongUsername)) //wrong or nill user name
+                    .border(.red, width: CGFloat(wrongUserEmail)) //wrong or nill user name
                 
                 //password login
                 HStack{
@@ -114,7 +114,7 @@ struct LoginView: View {
                 .cornerRadius(15)
                 .padding(11)
                 
-                //error message <here> for username or password
+                //error message <here> for userEmail or password
                 
                 HStack {
                     Text("Don't Have An Account?")

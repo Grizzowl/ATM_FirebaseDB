@@ -177,7 +177,7 @@ struct EditPassword: View {
     func saveButtonPressed() {
         //code here
         //window to accept user T&Cs for opening a Bank account then save info to firebase
-        //then nav to a window to make a username and password for the account
+        //then nav to a window to make a userEmail and password for the account
     }
 }
 

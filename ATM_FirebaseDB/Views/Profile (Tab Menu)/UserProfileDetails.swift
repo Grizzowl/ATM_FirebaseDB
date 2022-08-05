@@ -15,9 +15,9 @@ struct UserProfileDetails: View {
     @State var personalEmail:String = "mhunt@gmail.com"
     @State var lastEmail:String = "mhunt@gmail.com"
     @State var editPersonalEmail:Bool = true
-    //Login Username
-    @State var username:String = "Mike.Hunt"
-    @State var lastUsername:String = "Mike.Hunt"
+    //Login Username username is email
+    @State var username:String = "mhunt@gmail.com"
+    @State var lastUsername:String = "mhunt@gmail.com"
     @State var editUsername:Bool = true
     
     var lightGreen = Color("LightGreen")
@@ -182,7 +182,7 @@ struct UserProfileDetails: View {
     func saveButtonPressed() {
        //code here
         //window to accept user T&Cs for opening a Bank account then save info to firebase
-        //then nav to a window to make a username and password for the account
+        //then nav to a window to make a userEmail and password for the account
     }
 }
 

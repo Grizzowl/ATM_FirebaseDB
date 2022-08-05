@@ -8,7 +8,8 @@
 import SwiftUI
 
 struct UserLoginDetailsView: View {
-    @State private var username = ""
+    //username has to be users email
+    @State private var userEmail = ""
     @State private var createPassword = ""
     
     @State private var showCreatePasswordField = false
@@ -53,17 +54,18 @@ struct UserLoginDetailsView: View {
                 Divider()
                 
                 //choose user name login
-                Text("Enter Your Username")
+                Text("Enter Your Email")
                     .frame(width: 270, height: 5)
+                    .keyboardType(.emailAddress)
                     .padding()
                 
-                TextField("Username", text: $username)
+                TextField("Email Address", text: $userEmail)
                     .padding()
                     .frame(width: 300, height: 50)
                     .background(Color.black.opacity(0.05))
                     .cornerRadius(15)
                     .padding(1)
-                    //.border(.red, width: CGFloat(wrongUsername)) //wrong or nill user name
+                    //.border(.red, width: CGFloat(wrongUserEmail)) //wrong or nill user name
 
                 Rectangle()
                     .fill(darkGreen)
@@ -113,7 +115,7 @@ struct UserLoginDetailsView: View {
                 Button("Create Account") {
                     
                     //set up users details and save suername and password
-                    //check is username exists in the db
+                    //check is userEmail exists in the db
                     // WIP need set up new user reg view and link firebase
                     
                     
@@ -124,7 +126,7 @@ struct UserLoginDetailsView: View {
                 .cornerRadius(15)
                 .padding(11)
                 
-                //error message <here> for username or password
+                //error message <here> for userEmail or password
                 
                 
             }
