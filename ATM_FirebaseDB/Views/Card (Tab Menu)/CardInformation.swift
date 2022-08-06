@@ -28,6 +28,7 @@ struct CardInformation: View {
                     Text("Card Number")
                         .bold()
                     TextField("Card Number", text: $cardNumber)
+                        .disabled(true)
                         .padding()
                         .frame(height: 50)
                         .background(Color.black.opacity(0.05))
@@ -40,6 +41,7 @@ struct CardInformation: View {
                         ZStack{
                             if showExpDateField == false {
                                 SecureField("Password", text: $expDate)
+                                    .disabled(true)
                                     .padding()
                                     .frame(height: 50)
                                     .background(Color.black.opacity(0.05))
@@ -47,6 +49,7 @@ struct CardInformation: View {
                                     .padding(1)
                             } else {
                                 TextField("Password", text: $expDate)
+                                    .disabled(true)
                                     .padding()
                                     .frame(height: 50)
                                     .background(Color.black.opacity(0.05))
@@ -70,6 +73,7 @@ struct CardInformation: View {
                         ZStack{
                             if showCvvField == false {
                                 SecureField("Password", text: $cvvNumber)
+                                    .disabled(true)
                                     .padding()
                                     .frame(height: 50)
                                     .background(Color.black.opacity(0.05))
@@ -77,6 +81,7 @@ struct CardInformation: View {
                                     .padding(1)
                             } else {
                                 TextField("Password", text: $cvvNumber)
+                                    .disabled(true)
                                     .padding()
                                     .frame(height: 50)
                                     .background(Color.black.opacity(0.05))
