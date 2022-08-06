@@ -22,6 +22,8 @@ struct UserProfileDetails: View {
     
     var lightGreen = Color("LightGreen")
     
+    @EnvironmentObject var usvm: UserStateViewModel
+    
     var body: some View {
         
         ZStack{
@@ -30,11 +32,29 @@ struct UserProfileDetails: View {
             
             VStack{
                 
-                Text("Personal Infomation")
-                    .foregroundColor(lightGreen)
-                    .bold()
-                    .frame(width: 400, height: 30, alignment: .leading)
-                    .padding(.bottom)
+                HStack{
+                    Text("Personal Infomation")
+                        .foregroundColor(lightGreen)
+                        .bold()
+                        .frame(width: 320, height: 30, alignment: .leading)
+                        .padding(.bottom)
+                    
+                    Button {
+                        Task{
+                            usvm.signOut()
+                        }
+                    } label: {
+                        Text("Sign Out")
+                            .foregroundColor(.red)
+                            .bold()
+                            .frame(width: 90, height: 30, alignment: .center)
+                            .background(.black.opacity(0.1))
+                            .cornerRadius(15)
+                            .padding(.bottom)
+                    }
+                }
+                
+                
                 
                 Group{
                     //Account holders name
