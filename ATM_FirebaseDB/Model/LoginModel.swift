@@ -34,8 +34,6 @@ class UserStateViewModel: ObservableObject {
                 print("Successfully logged in as user: \(result?.user.uid ?? "")")
                 
             }
-            
-            
         }
     }
     
