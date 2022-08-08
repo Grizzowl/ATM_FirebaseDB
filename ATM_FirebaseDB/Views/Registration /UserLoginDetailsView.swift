@@ -53,7 +53,7 @@ struct UserLoginDetailsView: View {
                
                 Divider()
                 
-                //choose user name login
+                //Email login
                 Text("Enter Your Email")
                     .frame(width: 270, height: 5)
                     .keyboardType(.emailAddress)
@@ -65,7 +65,6 @@ struct UserLoginDetailsView: View {
                     .background(Color.black.opacity(0.05))
                     .cornerRadius(15)
                     .padding(1)
-                    //.border(.red, width: CGFloat(wrongUserEmail)) //wrong or nill user name
 
                 Rectangle()
                     .fill(darkGreen)
@@ -86,7 +85,7 @@ struct UserLoginDetailsView: View {
                                 .background(Color.black.opacity(0.05))
                                 .cornerRadius(15)
                                 .padding(1)
-                                //.border(.red, width: CGFloat(wrongPassword)) //wrong or nill user password
+                                
                         } else {
                             TextField("Password", text: $createPassword)
                                 .padding()
@@ -94,7 +93,7 @@ struct UserLoginDetailsView: View {
                                 .background(Color.black.opacity(0.05))
                                 .cornerRadius(15)
                                 .padding(1)
-                                //.border(.red, width: CGFloat(wrongPassword))
+                                
                         }
                         
                     }
