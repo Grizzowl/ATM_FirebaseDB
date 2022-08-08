@@ -109,7 +109,7 @@ struct RegisterNewUserView: View {
                     .cornerRadius(15)
                     .padding(1.5)
             })
-            
+            NavigationLink(destination: UserLoginDetailsView(), label: {Text("test")})
         }
         //.navigationBarHidden(true)
         .navigationBarTitle("Grizz Bank Ltd", displayMode: .inline)
