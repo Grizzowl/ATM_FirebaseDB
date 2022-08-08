@@ -38,6 +38,7 @@
 		D8E4341E2892765400FED1A6 /* CardDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8E4341D2892765400FED1A6 /* CardDetailsView.swift */; };
 		D8E43422289288CF00FED1A6 /* UserCardDetailsHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8E43421289288CF00FED1A6 /* UserCardDetailsHeader.swift */; };
 		D8E4342628928FE900FED1A6 /* HelpDesk.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8E4342528928FE900FED1A6 /* HelpDesk.swift */; };
+		D8E775A928A0F1E8005F6A7C /* CreateNewError.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8E775A828A0F1E8005F6A7C /* CreateNewError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -71,6 +72,7 @@
 		D8E4341D2892765400FED1A6 /* CardDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardDetailsView.swift; sourceTree = "<group>"; };
 		D8E43421289288CF00FED1A6 /* UserCardDetailsHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCardDetailsHeader.swift; sourceTree = "<group>"; };
 		D8E4342528928FE900FED1A6 /* HelpDesk.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpDesk.swift; sourceTree = "<group>"; };
+		D8E775A828A0F1E8005F6A7C /* CreateNewError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateNewError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 			children = (
 				D8B0FA042889238700F250E7 /* RegisterNewUserView.swift */,
 				D83DBD942890160C002F17E8 /* UserLoginDetailsView.swift */,
+				D8E775A828A0F1E8005F6A7C /* CreateNewError.swift */,
 			);
 			path = "Registration ";
 			sourceTree = "<group>";
@@ -322,6 +325,7 @@
 				D84F2AE3289BE20F009B4429 /* RegistrationModel.swift in Sources */,
 				D8E4342628928FE900FED1A6 /* HelpDesk.swift in Sources */,
 				D86390F42897DCC0003DC263 /* TransactionView.swift in Sources */,
+				D8E775A928A0F1E8005F6A7C /* CreateNewError.swift in Sources */,
 				D8BD08632898FFFA00A49373 /* UserProfileHeader.swift in Sources */,
 				D8BD08612898FFD500A49373 /* UserProfileView.swift in Sources */,
 				D86390F62897E195003DC263 /* BeneficiaryDetails.swift in Sources */,
