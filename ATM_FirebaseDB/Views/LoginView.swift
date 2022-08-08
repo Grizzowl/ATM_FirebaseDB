@@ -64,6 +64,7 @@ struct LoginView: View {
                 
                 //user login
                 TextField("Email", text: $userEmail)
+                    .keyboardType(.emailAddress)
                     .padding()
                     .frame(width: 300, height: 50)
                     .background(Color.black.opacity(0.05))
