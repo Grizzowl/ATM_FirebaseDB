@@ -105,38 +105,7 @@ struct UserProfileDetails: View {
                         .foregroundColor(.black.opacity(0.7))
                         .padding(.bottom, 30)
                 }
-                
-                Group{
-                    //Login Username
-                    Text("Username")
-                        .foregroundColor(lightGreen)
-                        .foregroundColor(.black.opacity(0.7))
-                        .frame(width: 400, height: 30, alignment: .leading)
-                    
-                    HStack {
-                        TextField("\(lastUsername)", text: $username)
-                            .disabled(editUsername)
-                            .frame(width: 400, height: 40)
-                            .background(editUsername ?  .clear : Color.black.opacity(0.1))
-                            .font(.title2)
-                    }
-                    .overlay(alignment: .trailing){
-                        Image(systemName: "square.and.pencil")
-                            .resizable()
-                            .frame(width: 25, height: 25)
-                            .foregroundColor(lightGreen)
-                            .onTapGesture {
-                                editUsername.toggle()
-                            }
-                            .padding()
-                    }
-                    
-                    Rectangle()
-                        .frame(width: 400, height: 1)
-                        .foregroundColor(.black.opacity(0.7))
-                        .padding(.bottom, 30)
-                }
-                
+               
                 Group{
                     //login Password
                     Text("Password")
