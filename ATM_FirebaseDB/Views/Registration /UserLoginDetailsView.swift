@@ -6,11 +6,17 @@
 //
 
 import SwiftUI
+import FirebaseAuth
 
 struct UserLoginDetailsView: View {
+    
+    @EnvironmentObject var cnul: CreateNewUserLogin
+   
     //username has to be users email
     @State private var userEmail = ""
     @State private var createPassword = ""
+    
+    @State private var signUpError = false
     
     @State private var showCreatePasswordField = false
     
@@ -136,12 +142,11 @@ struct UserLoginDetailsView: View {
         
     }
     
-    
-    
 }
 
 struct UserLoginDetailsView_Previews: PreviewProvider {
     static var previews: some View {
         UserLoginDetailsView()
+            .environmentObject(CreateNewUserLogin())
     }
 }
