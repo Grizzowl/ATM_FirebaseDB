@@ -8,19 +8,26 @@
 import Foundation
 import FirebaseAuth
 import Firebase
-import FirebaseCore
 
 class CreateNewUserLogin: ObservableObject {
     
+    let auth = Auth.auth()
+    
     func createNewUser(email:String, password:String){
         
-        Auth.auth().createUser(withEmail: email, password: password) {
-            result, error in
+        auth.createUser(withEmail: email, password: password) { result, error in
             if let error = error {
-                print("failed to create user:", error)
+                print("Failed to create user:", error)
+               
+                return
             }
+            
+            print("Successfully created user: \(result?.user.uid ?? "")")
+            
+            
         }
     }
     
 }
+    
 
