@@ -10,7 +10,7 @@ import FirebaseAuth
 import Firebase
 import FirebaseCore
 
-class CreateNewUser: ObservableObject {
+class CreateNewUserLogin: ObservableObject {
     
     func createNewUser(email:String, password:String){
         
