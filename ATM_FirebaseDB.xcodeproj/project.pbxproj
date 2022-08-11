@@ -10,6 +10,7 @@
 		D809E2F6289139E600E862A7 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D809E2F5289139E600E862A7 /* CardView.swift */; };
 		D809E2F82891508800E862A7 /* TransactionHistoryRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = D809E2F72891508800E862A7 /* TransactionHistoryRow.swift */; };
 		D809E2FD289157D100E862A7 /* TransactionsHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = D809E2FC289157D100E862A7 /* TransactionsHeader.swift */; };
+		D82FAA3128A5131800004FE9 /* ForgotPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D82FAA3028A5131800004FE9 /* ForgotPasswordView.swift */; };
 		D83DBD952890160C002F17E8 /* UserLoginDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D83DBD942890160C002F17E8 /* UserLoginDetailsView.swift */; };
 		D83DBD9C28902F0E002F17E8 /* HomePageControllerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D83DBD9B28902F0E002F17E8 /* HomePageControllerView.swift */; };
 		D84B79392893B22500DDE36B /* CardInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D84B79382893B22500DDE36B /* CardInformation.swift */; };
@@ -45,6 +46,7 @@
 		D809E2F5289139E600E862A7 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		D809E2F72891508800E862A7 /* TransactionHistoryRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionHistoryRow.swift; sourceTree = "<group>"; };
 		D809E2FC289157D100E862A7 /* TransactionsHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsHeader.swift; sourceTree = "<group>"; };
+		D82FAA3028A5131800004FE9 /* ForgotPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordView.swift; sourceTree = "<group>"; };
 		D83DBD942890160C002F17E8 /* UserLoginDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLoginDetailsView.swift; sourceTree = "<group>"; };
 		D83DBD9B28902F0E002F17E8 /* HomePageControllerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageControllerView.swift; sourceTree = "<group>"; };
 		D84B79382893B22500DDE36B /* CardInformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardInformation.swift; sourceTree = "<group>"; };
@@ -178,6 +180,7 @@
 			isa = PBXGroup;
 			children = (
 				D8B0FA022889225A00F250E7 /* LoginView.swift */,
+				D82FAA3028A5131800004FE9 /* ForgotPasswordView.swift */,
 				D83DBD93289014C0002F17E8 /* Registration  */,
 				D83DBD96289026DF002F17E8 /* Home (Tab Menu) */,
 				D8E434182892555000FED1A6 /* Card (Tab Menu) */,
@@ -329,6 +332,7 @@
 				D8BD08632898FFFA00A49373 /* UserProfileHeader.swift in Sources */,
 				D8BD08612898FFD500A49373 /* UserProfileView.swift in Sources */,
 				D86390F62897E195003DC263 /* BeneficiaryDetails.swift in Sources */,
+				D82FAA3128A5131800004FE9 /* ForgotPasswordView.swift in Sources */,
 				D8B0DC9D288850A800F42273 /* ATM_FirebaseDBApp.swift in Sources */,
 				D809E2FD289157D100E862A7 /* TransactionsHeader.swift in Sources */,
 				D8BD08672899237300A49373 /* EditPassword.swift in Sources */,
