@@ -103,6 +103,15 @@ struct LoginView: View {
                         .padding()
                 }
                 
+                NavigationLink(
+                    destination: ForgotPasswordView(),
+                    label: {
+                        Text("Forgot Password?")
+                            .bold()
+                            .frame(width: 300, alignment: .trailing)
+                            .foregroundColor(.blue)
+                            .padding(0.5)
+                    })
                 
                 Button("Sign In") {
                     
@@ -114,7 +123,7 @@ struct LoginView: View {
                 .frame(width: 300, height: 50)
                 .background(Color.black)
                 .cornerRadius(15)
-                .padding(11)
+                .padding(10)
                 
                 //error message <here> for userEmail or password
                 
