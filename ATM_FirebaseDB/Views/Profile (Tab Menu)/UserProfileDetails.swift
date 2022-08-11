@@ -45,10 +45,10 @@ struct UserProfileDetails: View {
                         }
                     } label: {
                         Text("Sign Out")
-                            .foregroundColor(.red)
+                            .foregroundColor(.white)
                             .bold()
                             .frame(width: 90, height: 30, alignment: .center)
-                            .background(.black.opacity(0.1))
+                            .background(lightGreen)
                             .cornerRadius(15)
                             .padding(.bottom)
                     }
@@ -114,7 +114,7 @@ struct UserProfileDetails: View {
                         .frame(width: 400, height: 30, alignment: .leading)
                     
                     NavigationLink(
-                    destination: EditPassword(),
+                    destination: ForgotPasswordView(),
                     label: {
                         HStack{
                             
@@ -139,7 +139,7 @@ struct UserProfileDetails: View {
                 }
                 
                 //test button
-                if (lastUsername != username || lastEmail != personalEmail) {
+                if (lastEmail != personalEmail) {
                     Button(
                         action: saveButtonPressed,
                         label: {Text("Save Changes".uppercased())
