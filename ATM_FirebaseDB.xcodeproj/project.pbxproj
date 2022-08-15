@@ -35,6 +35,7 @@
 		D8BD08652899053400A49373 /* UserProfileDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8BD08642899053400A49373 /* UserProfileDetails.swift */; };
 		D8BD08672899237300A49373 /* EditPassword.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8BD08662899237300A49373 /* EditPassword.swift */; };
 		D8C9F5EA289D30B700A6FEE8 /* CreateNewUserLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8C9F5E9289D30B700A6FEE8 /* CreateNewUserLogin.swift */; };
+		D8DC6E2728AA2755007355EF /* BankCardModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8DC6E2628AA2755007355EF /* BankCardModel.swift */; };
 		D8E4341A289255F200FED1A6 /* CardTemplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8E43419289255F200FED1A6 /* CardTemplate.swift */; };
 		D8E4341E2892765400FED1A6 /* CardDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8E4341D2892765400FED1A6 /* CardDetailsView.swift */; };
 		D8E43422289288CF00FED1A6 /* UserCardDetailsHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8E43421289288CF00FED1A6 /* UserCardDetailsHeader.swift */; };
@@ -70,6 +71,7 @@
 		D8BD08642899053400A49373 /* UserProfileDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileDetails.swift; sourceTree = "<group>"; };
 		D8BD08662899237300A49373 /* EditPassword.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditPassword.swift; sourceTree = "<group>"; };
 		D8C9F5E9289D30B700A6FEE8 /* CreateNewUserLogin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateNewUserLogin.swift; sourceTree = "<group>"; };
+		D8DC6E2628AA2755007355EF /* BankCardModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankCardModel.swift; sourceTree = "<group>"; };
 		D8E43419289255F200FED1A6 /* CardTemplate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardTemplate.swift; sourceTree = "<group>"; };
 		D8E4341D2892765400FED1A6 /* CardDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardDetailsView.swift; sourceTree = "<group>"; };
 		D8E43421289288CF00FED1A6 /* UserCardDetailsHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCardDetailsHeader.swift; sourceTree = "<group>"; };
@@ -163,6 +165,7 @@
 			children = (
 				D88C7F0E288A93D8009C4064 /* LoginModel.swift */,
 				D84F2AE2289BE20E009B4429 /* RegistrationModel.swift */,
+				D8DC6E2628AA2755007355EF /* BankCardModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -318,6 +321,7 @@
 				D8BD08652899053400A49373 /* UserProfileDetails.swift in Sources */,
 				D8B0FA032889225A00F250E7 /* LoginView.swift in Sources */,
 				D83DBD9C28902F0E002F17E8 /* HomePageControllerView.swift in Sources */,
+				D8DC6E2728AA2755007355EF /* BankCardModel.swift in Sources */,
 				D86390FA2897FDD4003DC263 /* PaymentConfirmation.swift in Sources */,
 				D8E4341A289255F200FED1A6 /* CardTemplate.swift in Sources */,
 				D8B0FA052889238700F250E7 /* RegisterNewUserView.swift in Sources */,
