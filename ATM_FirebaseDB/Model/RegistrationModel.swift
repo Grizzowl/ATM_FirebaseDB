@@ -24,7 +24,6 @@ struct RegistrationDetails {
 //User Card Info
 struct BankCardModel {
     
-    var id: ObjectIdentifier
     var balance: Double
     var cardNumber: String
     var expDate: String
