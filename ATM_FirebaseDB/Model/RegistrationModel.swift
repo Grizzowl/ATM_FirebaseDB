@@ -15,21 +15,12 @@ struct RegistrationDetails: Identifiable {
     var surname: String
     var userIDNumber: String
     var telephone: String
-    var email: String
     var dateOfBirth: Date
     
-    var username: String
+    var email: String
     var password: String
     
     var accountNumber: Int
-    var balance: Double
-    var cardNumber: Int
-    var expDate: String
-    var cvvNumber: Int
-    var transactionPaymentReference: String
-    var transactionHistoryAmount: Double
-    var transactionHistoryDate: Date
-    
 }
 
 
