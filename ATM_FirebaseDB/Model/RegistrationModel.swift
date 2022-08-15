@@ -7,10 +7,9 @@
 
 import Foundation
 
-
-struct RegistrationDetails: Identifiable {
+//User Info
+struct RegistrationDetails {
     
-    var id: String
     var name: String
     var surname: String
     var userIDNumber: String
@@ -22,7 +21,18 @@ struct RegistrationDetails: Identifiable {
     
     var accountNumber: Int
 }
-
+//User Card Info
+struct BankCardModel {
+    
+    var id: ObjectIdentifier
+    var balance: Double
+    var cardNumber: String
+    var expDate: String
+    var cvvNumber: String
+    var transactionPaymentReference: String
+    var transactionHistoryAmount: Double
+    var transactionHistoryDate: String
+}
 
 
 
