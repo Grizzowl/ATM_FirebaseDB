@@ -17,7 +17,7 @@ struct RegistrationDetails {
     var surname: String
     var userIDNumber: String
     var telephone: String
-    var dateOfBirth: Date
+    var dateOfBirth: String
     
     var email: String
     var password: String
@@ -69,6 +69,7 @@ final class RegistrationUserImpl: RegistrationHandler {
     //Reg new user info
     func registerNewUserDetails(with userCredentials: RegistrationDetails, with cardCredentials: BankCardModel) -> AnyPublisher<Void, Error> {
         
+        // A publisher that awaits subscription before running the supplied closure to create a publisher for the new subscriber.
         Deferred {
             
             Future { promise in
@@ -95,7 +96,7 @@ final class RegistrationUserImpl: RegistrationHandler {
                             Database
                                 .database()
                                 .reference()
-                                .child("users_table")
+                                .child("users")
                                 .child(uid)
                                 .updateChildValues(userValues) { error, ref in
                                     
@@ -106,7 +107,7 @@ final class RegistrationUserImpl: RegistrationHandler {
                                     }
                                 }
                         }
-                        if let uid = res?.user.uid {
+                       /* if let uid = res?.user.uid {
                             //user card
                             let userCardValues = [RegistrationUserCardKeys.balance.rawValue: cardCredentials.balance,
                                                   RegistrationUserCardKeys.cardNumber.rawValue: cardCredentials.cardNumber,
@@ -129,7 +130,7 @@ final class RegistrationUserImpl: RegistrationHandler {
                                         promise(.success(()))
                                     }
                                 }
-                        }
+                        } */
                     }
                 }
             }
