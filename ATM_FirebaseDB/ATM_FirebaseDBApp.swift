@@ -17,31 +17,21 @@ struct ATM_FirebaseDBApp: App {
         FirebaseApp.configure()
     }
     
-    @StateObject var userStateViewModel = UserStateViewModel()
+    @StateObject var sessionService = SessionServiceImpl()
     
     var body: some Scene {
         WindowGroup {
-            NavigationView{
-                ApplicationSwitcher()
+            NavigationView {
+                switch sessionService.state {
+                    case .loggedIn:
+                    HomePageControllerView()
+                            .environmentObject(sessionService)
+                    case .loggedOut:
+                    LoginView()
+                    }
+                
             }
-            .navigationViewStyle(.stack)
-            .environmentObject(userStateViewModel)
-            .navigationBarBackButtonHidden(true)
-            .navigationBarHidden(true)
         }
     }
 }
 
-struct ApplicationSwitcher: View {
-    
-    @EnvironmentObject var vm: UserStateViewModel
-    
-    var body: some View {
-        if (vm.isLoggedIn) {
-            HomePageControllerView() //[WIP] Set up a home screen for the user linked to firebase
-        } else {
-            LoginView()
-        }
-        
-    }
-}
