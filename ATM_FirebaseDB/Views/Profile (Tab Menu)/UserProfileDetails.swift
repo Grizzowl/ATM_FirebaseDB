@@ -22,8 +22,6 @@ struct UserProfileDetails: View {
     
     var lightGreen = Color("LightGreen")
     
-    @EnvironmentObject var usvm: UserStateViewModel
-    
     var body: some View {
         
         ZStack{
@@ -41,7 +39,7 @@ struct UserProfileDetails: View {
                     
                     Button {
                         Task{
-                            usvm.signOut()
+                            //usvm.signOut()
                         }
                     } label: {
                         Text("Sign Out")

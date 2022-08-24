@@ -10,7 +10,9 @@ import FirebaseAuth
 
 struct UserLoginDetailsView: View {
     
-    @EnvironmentObject var cnul: CreateNewUserLogin
+    @StateObject private var regVM = RegistrationViewModelImp(
+        service: RegistrationUserImpl()
+    )
    
     //username has to be users email
     @State private var userEmail = ""
@@ -65,7 +67,7 @@ struct UserLoginDetailsView: View {
                     .keyboardType(.emailAddress)
                     .padding()
                 
-                TextField("Email Address", text: $userEmail)
+                TextField("Email Address", text: $regVM.newUser.email)
                     .padding()
                     .frame(width: 300, height: 50)
                     .background(Color.black.opacity(0.05))
@@ -85,7 +87,7 @@ struct UserLoginDetailsView: View {
                 HStack{
                     ZStack{
                         if showCreatePasswordField == false {
-                            SecureField("Password", text: $createPassword)
+                            SecureField("Password", text: $regVM.newUser.password)
                                 .padding()
                                 .frame(width: 300, height: 50)
                                 .background(Color.black.opacity(0.05))
@@ -93,7 +95,7 @@ struct UserLoginDetailsView: View {
                                 .padding(1)
                                 
                         } else {
-                            TextField("Password", text: $createPassword)
+                            TextField("Password", text: $regVM.newUser.password)
                                 .padding()
                                 .frame(width: 300, height: 50)
                                 .background(Color.black.opacity(0.05))
@@ -119,11 +121,8 @@ struct UserLoginDetailsView: View {
                 
                 Button("Create Account") {
                     
-                    //set up users details and save suername and password
-                    //check is userEmail exists in the db
-                    // WIP need set up new user reg view and link firebase
-                    
-                    
+                    regVM.createNewUser()
+                   
                 }
                 .foregroundColor(.white)
                 .frame(width: 300, height: 50)
@@ -147,6 +146,6 @@ struct UserLoginDetailsView: View {
 struct UserLoginDetailsView_Previews: PreviewProvider {
     static var previews: some View {
         UserLoginDetailsView()
-            .environmentObject(CreateNewUserLogin())
+            //.environmentObject(CreateNewUserLogin())
     }
 }

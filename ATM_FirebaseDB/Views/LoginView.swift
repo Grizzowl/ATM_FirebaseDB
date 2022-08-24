@@ -9,8 +9,6 @@ import SwiftUI
 
 struct LoginView: View {
     
-    @EnvironmentObject var uSVM: UserStateViewModel
-    
     @State private var userEmail = ""
     @State private var password = ""
     @State private var wrongUserEmail = 0
@@ -115,7 +113,7 @@ struct LoginView: View {
                 
                 Button("Sign In") {
                     
-                    uSVM.logIn(email: userEmail, password: password)
+                    //uSVM.logIn(email: userEmail, password: password)
                     
                     
                 }
