@@ -58,7 +58,7 @@ struct ForgotPasswordView: View {
                         
                         Button(
                             action: saveButtonPressed,
-                            label: {Text("Save Changes".uppercased())
+                            label: {Text("Submit".uppercased())
                                     .foregroundColor(.white)
                                     .font(.headline)
                                     .frame(height: 50)
