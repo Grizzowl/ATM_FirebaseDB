@@ -7,7 +7,7 @@
 
 import Foundation
 
-class autoFillFuncModel: ObservableObject {
+class AutoFillFuncModel: ObservableObject {
     
     // EXP DATE
    
