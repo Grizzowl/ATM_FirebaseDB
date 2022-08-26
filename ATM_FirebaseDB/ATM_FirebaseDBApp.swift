@@ -17,7 +17,7 @@ struct ATM_FirebaseDBApp: App {
         FirebaseApp.configure()
     }
     
-    @StateObject var sessionService = SessionServiceImpl()
+    @StateObject var sessionService = UserSessionImp()
     
     var body: some Scene {
         WindowGroup {
