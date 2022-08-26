@@ -9,6 +9,8 @@ import SwiftUI
 
 struct UserProfileDetails: View {
     
+    @EnvironmentObject var uSImp: UserSessionImp
+    
     //Account holders name
     @State var accountHoldersName:String = "Mike Hunt"
     //Email Address
@@ -39,7 +41,7 @@ struct UserProfileDetails: View {
                     
                     Button {
                         Task{
-                            //usvm.signOut()
+                            uSImp.logout()
                         }
                     } label: {
                         Text("Sign Out")
@@ -177,5 +179,6 @@ struct UserProfileDetails: View {
 struct UserProfileDetails_Previews: PreviewProvider {
     static var previews: some View {
         UserProfileDetails()
+            .environmentObject(UserSessionImp())
     }
 }
