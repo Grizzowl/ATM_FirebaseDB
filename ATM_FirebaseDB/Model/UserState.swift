@@ -29,7 +29,7 @@ protocol SessionService {
     func logout()
 }
 
-final class SessionServiceImpl: SessionService, ObservableObject {
+final class UserSessionImp: SessionService, ObservableObject {
     
     @Published var state: SessionState = .loggedOut
     @Published var userDetails: UserSessionDetails?
@@ -52,7 +52,7 @@ final class SessionServiceImpl: SessionService, ObservableObject {
     }
 }
 
-private extension SessionServiceImpl {
+private extension UserSessionImp {
     //split func for user and card
     func retrieveUserDetails() {
         
@@ -69,7 +69,7 @@ private extension SessionServiceImpl {
                     Database
                         .database()
                         .reference()
-                        .child("users_table")
+                        .child("users")
                         .child(uid)
                         .observe(.value) { [weak self] snapshot in
                             
