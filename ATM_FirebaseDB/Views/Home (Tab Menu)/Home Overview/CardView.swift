@@ -9,8 +9,6 @@ import SwiftUI
 
 struct CardView: View {
     
-    @ObservedObject var uvm = UserViewModel()
-    
     let darkGreen = Color("DarkGreen")
     let lightGreen = Color("LightGreen")
     let gold = Color("Gold")
