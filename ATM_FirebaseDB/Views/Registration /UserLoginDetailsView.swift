@@ -137,7 +137,19 @@ struct UserLoginDetailsView: View {
             Spacer()
         }
         .navigationBarHidden(true)
-        
+        .alert(isPresented: $regVM.hasError,
+               content: {
+                
+                if case .failed(let error) = regVM.state {
+                    return Alert(
+                        title: Text("Error"),
+                        message: Text(error.localizedDescription))
+                } else {
+                    return Alert(
+                        title: Text("Error"),
+                        message: Text("Something went wrong"))
+                }
+        })
         
     }
     
@@ -146,6 +158,5 @@ struct UserLoginDetailsView: View {
 struct UserLoginDetailsView_Previews: PreviewProvider {
     static var previews: some View {
         UserLoginDetailsView()
-            //.environmentObject(CreateNewUserLogin())
     }
 }
