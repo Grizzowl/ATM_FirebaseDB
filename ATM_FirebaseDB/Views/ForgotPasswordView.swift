@@ -9,7 +9,10 @@ import SwiftUI
 
 struct ForgotPasswordView: View {
     
-
+    @StateObject private var rPVMImp = ResetPasswordViewModelImp(
+        service: ResetPasswordServiceImp()
+    )
+    
     @State var confirmEmail:String = ""
     
     var lightGreen = Color("LightGreen")
@@ -34,15 +37,15 @@ struct ForgotPasswordView: View {
                         .padding(.leading, 10)
                         .frame(width: 400, height: 30, alignment: .leading)
                     
-  
-                                TextField("Current Email", text: $confirmEmail)
-                                    .padding()
-                                    .frame(width: 350, height: 50)
-                                    .background(Color.black.opacity(0.05))
-                                    .cornerRadius(15)
-                                    .padding(.trailing, 60)
-       
-                    }
+                    
+                    TextField("Current Email", text: $rPVMImp.email)
+                        .padding()
+                        .frame(width: 350, height: 50)
+                        .background(Color.black.opacity(0.05))
+                        .cornerRadius(15)
+                        .padding(.trailing, 60)
+                    
+                }
                 
                 Divider()
                 
@@ -51,37 +54,30 @@ struct ForgotPasswordView: View {
                         .foregroundColor(.red)
                     
                 }
+                
+                Spacer()
+                
+                VStack{
                     
-                    Spacer()
-                    
-                    VStack{
-                        
-                        Button(
-                            action: saveButtonPressed,
-                            label: {Text("Submit".uppercased())
-                                    .foregroundColor(.white)
-                                    .font(.headline)
-                                    .frame(height: 50)
-                                    .frame(maxWidth: 300)
-                                    .background(lightGreen)
-                                    .cornerRadius(15)
-                                    .padding(10)
-                            })
-                    }
-                    .padding(.top, 50)
-                    
-                    
+                    Button(
+                        action: rPVMImp.sendPasswordResetRequest,
+                        label: {Text("Submit".uppercased())
+                                .foregroundColor(.white)
+                                .font(.headline)
+                                .frame(height: 50)
+                                .frame(maxWidth: 300)
+                                .background(lightGreen)
+                                .cornerRadius(15)
+                                .padding(10)
+                        })
                 }
+                .padding(.top, 50)
+                
+                
+            }
         }
-        }
-        
-    
-        
-    func saveButtonPressed() {
-        //code here
-        //window to accept user T&Cs for opening a Bank account then save info to firebase
-        //then nav to a window to make a userEmail and password for the account
     }
+    
 }
 
 struct ForgotPasswordView_Previews: PreviewProvider {
