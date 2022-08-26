@@ -9,6 +9,10 @@ import SwiftUI
 
 struct LoginView: View {
     
+    @StateObject private var lVMImp = LoginViewModelImp(
+        service: LoginServiceImp()
+    )
+    
     @State private var userEmail = ""
     @State private var password = ""
     @State private var wrongUserEmail = 0
@@ -51,7 +55,7 @@ struct LoginView: View {
                     .font(Font.custom("Snell Roundhand", size: 50))
                     .bold()
                     .padding()
-               
+                
                 Divider()
                 
                 //login screen
@@ -61,7 +65,7 @@ struct LoginView: View {
                     .padding()
                 
                 //user login
-                TextField("Email", text: $userEmail)
+                TextField("Email", text: $lVMImp.loginDetails.email)
                     .keyboardType(.emailAddress)
                     .padding()
                     .frame(width: 300, height: 50)
@@ -74,7 +78,7 @@ struct LoginView: View {
                 HStack{
                     ZStack{
                         if showPasswordField == false {
-                            SecureField("Password", text: $password)
+                            SecureField("Password", text: $lVMImp.loginDetails.password)
                                 .padding()
                                 .frame(width: 300, height: 50)
                                 .background(Color.black.opacity(0.05))
@@ -82,7 +86,7 @@ struct LoginView: View {
                                 .padding(1)
                                 .border(.red, width: CGFloat(wrongPassword)) //wrong or nill user password
                         } else {
-                            TextField("Password", text: $password)
+                            TextField("Password", text: $lVMImp.loginDetails.password)
                                 .padding()
                                 .frame(width: 300, height: 50)
                                 .background(Color.black.opacity(0.05))
@@ -113,8 +117,7 @@ struct LoginView: View {
                 
                 Button("Sign In") {
                     
-                    //uSVM.logIn(email: userEmail, password: password)
-                    
+                    lVMImp.login()
                     
                 }
                 .foregroundColor(.white)
@@ -139,11 +142,21 @@ struct LoginView: View {
             Spacer()
         }
         .navigationBarHidden(true)
-        
-        
+        // make this custom error message
+        .alert(isPresented: $lVMImp.hasError,
+               content: {
+                
+                if case .failed(let error) = lVMImp.state {
+                    return Alert(
+                        title: Text("Error"),
+                        message: Text(error.localizedDescription))
+                } else {
+                    return Alert(
+                        title: Text("Error"),
+                        message: Text("Something went wrong"))
+                }
+         })
     }
-    
-    
     
 }
 
