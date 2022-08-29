@@ -175,10 +175,8 @@
 		D8B0DCB1288858A800F42273 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				D88C7F0E288A93D8009C4064 /* UserState.swift */,
-				D84F2AE2289BE20E009B4429 /* RegistrationModel.swift */,
-				D8CD9CC228B7620900BDC0D0 /* UserLoginModel.swift */,
-				D8CD9CC428B7730C00BDC0D0 /* ResetPassword.swift */,
+				D8D0BFF328BCED570002C94E /* Firestore Model */,
+				D8D0BFF228BCED2D0002C94E /* Auth Model */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -186,12 +184,8 @@
 		D8B0DCB2288858B700F42273 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				D8DC6E2D28AA365C007355EF /* Registration Number Auto Generation */,
-				D84F2AE4289C01B8009B4429 /* UserViewModel.swift */,
-				D8C9F5E9289D30B700A6FEE8 /* CreateNewUserLogin.swift */,
-				D8D4B97028ABAEBA000BD6DD /* RegisterNewUserViewModel.swift */,
-				D80C175128B60F72006CD04E /* LoginViewModel.swift */,
-				D8CD9CC628B776AF00BDC0D0 /* ResetPasswordViewModel.swift */,
+				D8D0BFF528BCEDBD0002C94E /* Firestore VM */,
+				D8D0BFF428BCED9D0002C94E /* Auth VM */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -217,6 +211,44 @@
 				D8B0DCA0288850A900F42273 /* Assets.xcassets */,
 			);
 			path = Assets;
+			sourceTree = "<group>";
+		};
+		D8D0BFF228BCED2D0002C94E /* Auth Model */ = {
+			isa = PBXGroup;
+			children = (
+				D88C7F0E288A93D8009C4064 /* UserState.swift */,
+				D84F2AE2289BE20E009B4429 /* RegistrationModel.swift */,
+				D8CD9CC228B7620900BDC0D0 /* UserLoginModel.swift */,
+				D8CD9CC428B7730C00BDC0D0 /* ResetPassword.swift */,
+			);
+			name = "Auth Model";
+			sourceTree = "<group>";
+		};
+		D8D0BFF328BCED570002C94E /* Firestore Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "Firestore Model";
+			sourceTree = "<group>";
+		};
+		D8D0BFF428BCED9D0002C94E /* Auth VM */ = {
+			isa = PBXGroup;
+			children = (
+				D84F2AE4289C01B8009B4429 /* UserViewModel.swift */,
+				D8C9F5E9289D30B700A6FEE8 /* CreateNewUserLogin.swift */,
+				D8D4B97028ABAEBA000BD6DD /* RegisterNewUserViewModel.swift */,
+				D80C175128B60F72006CD04E /* LoginViewModel.swift */,
+				D8CD9CC628B776AF00BDC0D0 /* ResetPasswordViewModel.swift */,
+				D8DC6E2D28AA365C007355EF /* Registration Number Auto Generation */,
+			);
+			path = "Auth VM";
+			sourceTree = "<group>";
+		};
+		D8D0BFF528BCEDBD0002C94E /* Firestore VM */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Firestore VM";
 			sourceTree = "<group>";
 		};
 		D8DC6E2D28AA365C007355EF /* Registration Number Auto Generation */ = {

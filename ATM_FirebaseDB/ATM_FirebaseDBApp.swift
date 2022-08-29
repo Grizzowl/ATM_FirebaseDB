@@ -8,7 +8,7 @@
 import SwiftUI
 import FirebaseCore
 import Firebase
-
+/* //Auth View Manager
 @main
 struct ATM_FirebaseDBApp: App {
     
@@ -34,4 +34,4 @@ struct ATM_FirebaseDBApp: App {
         }
     }
 }
-
+*/

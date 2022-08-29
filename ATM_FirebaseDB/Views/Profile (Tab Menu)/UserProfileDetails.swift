@@ -8,9 +8,9 @@
 import SwiftUI
 
 struct UserProfileDetails: View {
-    
+    /* Firebase-Auth*
     @EnvironmentObject var uSImp: UserSessionImp
-    
+    */
     //Account holders name
     @State var accountHoldersName:String = "Mike Hunt"
     //Email Address
@@ -41,7 +41,7 @@ struct UserProfileDetails: View {
                     
                     Button {
                         Task{
-                            uSImp.logout()
+                           // uSImp.logout() Firebase-Auth*
                         }
                     } label: {
                         Text("Sign Out")
@@ -114,7 +114,8 @@ struct UserProfileDetails: View {
                         .frame(width: 400, height: 30, alignment: .leading)
                     
                     NavigationLink(
-                    destination: ForgotPasswordView(),
+                        destination: /* ForgotPasswordView() Firebase-Auth* */
+                        {/* Edit Password Link Here */},
                     label: {
                         HStack{
                             
@@ -179,6 +180,6 @@ struct UserProfileDetails: View {
 struct UserProfileDetails_Previews: PreviewProvider {
     static var previews: some View {
         UserProfileDetails()
-            .environmentObject(UserSessionImp())
+            // .environmentObject(UserSessionImp()) Firebase-Auth*
     }
 }

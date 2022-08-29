@@ -4,7 +4,7 @@
 //
 //  Created by Grizzowl on 2022/08/16.
 //
-
+/*
 import Foundation
 import Combine
 
@@ -92,3 +92,4 @@ private extension RegistrationViewModelImp {
             .assign(to: &$hasError)
     }
 }
+*/

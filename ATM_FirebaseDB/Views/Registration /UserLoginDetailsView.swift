@@ -9,11 +9,11 @@ import SwiftUI
 import FirebaseAuth
 
 struct UserLoginDetailsView: View {
-    
-    @StateObject private var regVM = RegistrationViewModelImp(
-        service: RegistrationUserImpl()
-    )
-   
+    /* Firebase-Auth*
+     @StateObject private var regVM = RegistrationViewModelImp(
+     service: RegistrationUserImpl()
+     )
+     */
     //username has to be users email
     @State private var userEmail = ""
     @State private var createPassword = ""
@@ -57,8 +57,8 @@ struct UserLoginDetailsView: View {
                 
                 Text("Create Your Login Details")
                     .font(.title)
-                    
-               
+                
+                
                 Divider()
                 
                 //Email login
@@ -67,41 +67,44 @@ struct UserLoginDetailsView: View {
                     .keyboardType(.emailAddress)
                     .padding()
                 
-                TextField("Email Address", text: $regVM.newUser.email)
+                //TextField("Email Address", text: $regVM.newUser.email) Firebase-Auth*
+                TextField("Email Address", text: $userEmail)
                     .padding()
                     .frame(width: 300, height: 50)
                     .background(Color.black.opacity(0.05))
                     .cornerRadius(15)
                     .padding(1)
-
+                
                 Rectangle()
                     .fill(darkGreen)
                     .frame(width: 350, height: 1, alignment: .center)
                     .padding(.leading, 15.5)
-                    
+                
                 //password login
                 Text("Please Create A Password")
                     .frame(width: 270, height: 5)
                     .padding()
-                    
+                
                 HStack{
                     ZStack{
                         if showCreatePasswordField == false {
-                            SecureField("Password", text: $regVM.newUser.password)
+                            //SecureField("Password", text: $regVM.newUser.password) Firebase-Auth*
+                            SecureField("Password", text: $createPassword)
                                 .padding()
                                 .frame(width: 300, height: 50)
                                 .background(Color.black.opacity(0.05))
                                 .cornerRadius(15)
                                 .padding(1)
-                                
+                            
                         } else {
-                            TextField("Password", text: $regVM.newUser.password)
+                            // TextField("Password", text: $regVM.newUser.password) Firebase-Auth*
+                            TextField("Password", text: $createPassword)
                                 .padding()
                                 .frame(width: 300, height: 50)
                                 .background(Color.black.opacity(0.05))
                                 .cornerRadius(15)
                                 .padding(1)
-                                
+                            
                         }
                         
                     }
@@ -120,9 +123,9 @@ struct UserLoginDetailsView: View {
                     .padding(.leading, 15.5)
                 
                 Button("Create Account") {
-                    
-                    regVM.createNewUser()
-                   
+                    /* Firebase-Auth*
+                     regVM.createNewUser()
+                     */
                 }
                 .foregroundColor(.white)
                 .frame(width: 300, height: 50)
@@ -137,20 +140,21 @@ struct UserLoginDetailsView: View {
             Spacer()
         }
         .navigationBarHidden(true)
-        .alert(isPresented: $regVM.hasError,
-               content: {
-                
-                if case .failed(let error) = regVM.state {
-                    return Alert(
-                        title: Text("Error"),
-                        message: Text(error.localizedDescription))
-                } else {
-                    return Alert(
-                        title: Text("Error"),
-                        message: Text("Something went wrong"))
-                }
-        })
-        
+        /* Firebase-Auth*
+         .alert(isPresented: $regVM.hasError,
+         content: {
+         
+         if case .failed(let error) = regVM.state {
+         return Alert(
+         title: Text("Error"),
+         message: Text(error.localizedDescription))
+         } else {
+         return Alert(
+         title: Text("Error"),
+         message: Text("Something went wrong"))
+         }
+         })
+         */
     }
     
 }

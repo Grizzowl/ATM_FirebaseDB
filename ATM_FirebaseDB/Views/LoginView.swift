@@ -8,11 +8,11 @@
 import SwiftUI
 
 struct LoginView: View {
-    
-    @StateObject private var lVMImp = LoginViewModelImp(
-        service: LoginServiceImp()
-    )
-    
+    /* //Auth VM
+     @StateObject private var lVMImp = LoginViewModelImp(
+     service: LoginServiceImp()
+     )
+     */
     @State private var userEmail = ""
     @State private var password = ""
     @State private var wrongUserEmail = 0
@@ -65,7 +65,8 @@ struct LoginView: View {
                     .padding()
                 
                 //user login
-                TextField("Email", text: $lVMImp.loginDetails.email)
+                //TextField("Email", text: $lVMImp.loginDetails.email) Firebase-Auth*
+                TextField("Email", text: $userEmail)
                     .keyboardType(.emailAddress)
                     .padding()
                     .frame(width: 300, height: 50)
@@ -78,7 +79,8 @@ struct LoginView: View {
                 HStack{
                     ZStack{
                         if showPasswordField == false {
-                            SecureField("Password", text: $lVMImp.loginDetails.password)
+                            //  SecureField("Password", text: $lVMImp.loginDetails.password) Firebase-Auth*
+                            SecureField("Password", text: $password)
                                 .padding()
                                 .frame(width: 300, height: 50)
                                 .background(Color.black.opacity(0.05))
@@ -86,7 +88,8 @@ struct LoginView: View {
                                 .padding(1)
                                 .border(.red, width: CGFloat(wrongPassword)) //wrong or nill user password
                         } else {
-                            TextField("Password", text: $lVMImp.loginDetails.password)
+                            //   TextField("Password", text: $lVMImp.loginDetails.password) Firebase-Auth*
+                            TextField("Password", text: $password)
                                 .padding()
                                 .frame(width: 300, height: 50)
                                 .background(Color.black.opacity(0.05))
@@ -104,21 +107,21 @@ struct LoginView: View {
                         }
                         .padding()
                 }
-                
-                NavigationLink(
-                    destination: ForgotPasswordView(),
-                    label: {
-                        Text("Forgot Password?")
-                            .bold()
-                            .frame(width: 300, alignment: .trailing)
-                            .foregroundColor(.blue)
-                            .padding(0.5)
-                    })
-                
+                /* Firebase-Auth*
+                 NavigationLink(
+                 destination: ForgotPasswordView(),
+                 label: {
+                 Text("Forgot Password?")
+                 .bold()
+                 .frame(width: 300, alignment: .trailing)
+                 .foregroundColor(.blue)
+                 .padding(0.5)
+                 })
+                 */
                 Button("Sign In") {
-                    
-                    lVMImp.login()
-                    
+                    /* Firebase-Auth*
+                     lVMImp.login()
+                     */
                 }
                 .foregroundColor(.white)
                 .frame(width: 300, height: 50)
@@ -143,19 +146,21 @@ struct LoginView: View {
         }
         .navigationBarHidden(true)
         // make this custom error message
-        .alert(isPresented: $lVMImp.hasError,
-               content: {
-                
-                if case .failed(let error) = lVMImp.state {
-                    return Alert(
-                        title: Text("Error"),
-                        message: Text(error.localizedDescription))
-                } else {
-                    return Alert(
-                        title: Text("Error"),
-                        message: Text("Something went wrong"))
-                }
+        /* Firebase-Auth*
+         .alert(isPresented: $lVMImp.hasError,
+         content: {
+         
+         if case .failed(let error) = lVMImp.state {
+         return Alert(
+         title: Text("Error"),
+         message: Text(error.localizedDescription))
+         } else {
+         return Alert(
+         title: Text("Error"),
+         message: Text("Something went wrong"))
+         }
          })
+         */
     }
     
 }

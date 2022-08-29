@@ -4,7 +4,7 @@
 //
 //  Created by Grizzowl on 2022/08/24.
 //
-
+/*
 import Foundation
 import Combine
 import SwiftUI
@@ -72,3 +72,4 @@ private extension LoginViewModelImp {
             .assign(to: &$hasError)
     }
 }
+*/

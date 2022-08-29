@@ -4,7 +4,7 @@
 //
 //  Created by Grizzowl on 2022/08/11.
 //
-
+/* Firebase-Auth*
 import SwiftUI
 
 struct ForgotPasswordView: View {
@@ -38,7 +38,7 @@ struct ForgotPasswordView: View {
                         .frame(width: 400, height: 30, alignment: .leading)
                     
                     
-                    TextField("Current Email", text: $rPVMImp.email)
+                    TextField("Current Email", text: $rPVMImp.email) 
                         .padding()
                         .frame(width: 350, height: 50)
                         .background(Color.black.opacity(0.05))
@@ -85,3 +85,4 @@ struct ForgotPasswordView_Previews: PreviewProvider {
         ForgotPasswordView()
     }
 }
+*/
