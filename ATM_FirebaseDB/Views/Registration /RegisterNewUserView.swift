@@ -13,12 +13,17 @@ struct RegisterNewUserView: View {
      service: RegistrationUserImpl()
      )
      */
+    
+    @StateObject private var regVM = RegistrationViewModelImp(
+        service: RegistrationServiceImp()
+    )
+    
     @State var nameTextFieldText: String = ""
     @State var surnameTextFieldText: String = ""
     @State var idTextFieldText: String = ""
     @State var telephoneTextFieldText: String = ""
     @State var emailTextFieldText: String = ""
-    
+   
     @State private var dateOfBirth = Date()
     @State private var getdateOfBirth = ""
     var formattedDate: DateFormatter {
@@ -48,7 +53,7 @@ struct RegisterNewUserView: View {
                     VStack {
                         Text("Name")
                         //TextField("Name", text: $regVM.newUser.name) Firebase-Auth*
-                        TextField("Name", text: $nameTextFieldText)
+                        TextField("Name", text: $regVM.newUser.name)
                     }
                     .padding()
                     
@@ -56,7 +61,7 @@ struct RegisterNewUserView: View {
                     VStack {
                         Text("Surname")
                         //TextField("Surname", text: $regVM.newUser.surname) Firebase-Auth*
-                        TextField("Surname", text: $surnameTextFieldText)
+                        TextField("Surname", text: $regVM.newUser.surname)
                     }
                     .padding()
                     
@@ -64,7 +69,7 @@ struct RegisterNewUserView: View {
                     VStack {
                         Text("ID") //look up regex make sure its a valid SA id format
                         //TextField("Your ID number", text: $regVM.newUser.userIDNumber) Firebase-Auth*
-                        TextField("Your ID number", text: $idTextFieldText)
+                        TextField("Your ID number", text: $regVM.newUser.userIDNumber)
                     }
                     .padding()
                     
@@ -76,7 +81,7 @@ struct RegisterNewUserView: View {
                             Text("+27")
                             Spacer()
                             //TextField("xx-xxx-xxxx", text: $regVM.newUser.telephone) Firebase-Auth*
-                            TextField("xx-xxx-xxxx", text: $telephoneTextFieldText)
+                            TextField("xx-xxx-xxxx", text: $regVM.newUser.telephone)
                         }
                     }
                     .padding()
@@ -178,7 +183,7 @@ struct RegisterNewUserView: View {
             // add a dead button untill all fields are fill in properly
             // Firebase-Auth*
             //  Button(action: {regVM.createNewUser()},//pass datefunc logic in savebutton func
-            Button(action: {},
+            Button(action: {regVM.create()},
                    label: {
                 Text("Save".uppercased())
                     .foregroundColor(.white)
@@ -197,6 +202,18 @@ struct RegisterNewUserView: View {
         
         
         
+    }
+    
+    private func setCardExpDate() -> Void {
+        
+        let currentDate = Date()
+        var cardExpDatemodifier = DateComponents()
+        cardExpDatemodifier.year = 5
+        let cardExpDate = Calendar.current.date(byAdding: cardExpDatemodifier, to: currentDate)
+        let expDateMonth = cardExpDate!.formatted(.dateTime.month(.twoDigits))
+        let expDateYear = cardExpDate!.formatted(.dateTime.year(.twoDigits))
+        let expDate = "\(expDateMonth)/\(expDateYear)"
+        return regVM.newUserCard.expDate = expDate
     }
     
     func saveButtonPressed(){
