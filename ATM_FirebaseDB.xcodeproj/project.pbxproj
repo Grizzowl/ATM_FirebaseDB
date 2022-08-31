@@ -40,6 +40,9 @@
 		D8CD9CC528B7730C00BDC0D0 /* ResetPassword.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8CD9CC428B7730C00BDC0D0 /* ResetPassword.swift */; };
 		D8CD9CC728B776AF00BDC0D0 /* ResetPasswordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8CD9CC628B776AF00BDC0D0 /* ResetPasswordViewModel.swift */; };
 		D8D4B97128ABAEBA000BD6DD /* RegisterNewUserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8D4B97028ABAEBA000BD6DD /* RegisterNewUserViewModel.swift */; };
+		D8D780BA28BE2724008FE566 /* RegisterUserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8D780B928BE2724008FE566 /* RegisterUserViewModel.swift */; };
+		D8D780BC28BE2741008FE566 /* RegisterUserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8D780BB28BE2741008FE566 /* RegisterUserModel.swift */; };
+		D8D780BE28BE3C0D008FE566 /* SessionState.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8D780BD28BE3C0D008FE566 /* SessionState.swift */; };
 		D8DC6E2C28AA3593007355EF /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = D8DC6E2B28AA3593007355EF /* FirebaseDatabase */; };
 		D8DC6E2F28AA37A8007355EF /* AutoFillFuncModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8DC6E2E28AA37A8007355EF /* AutoFillFuncModel.swift */; };
 		D8E4341A289255F200FED1A6 /* CardTemplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8E43419289255F200FED1A6 /* CardTemplate.swift */; };
@@ -82,6 +85,9 @@
 		D8CD9CC428B7730C00BDC0D0 /* ResetPassword.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPassword.swift; sourceTree = "<group>"; };
 		D8CD9CC628B776AF00BDC0D0 /* ResetPasswordViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordViewModel.swift; sourceTree = "<group>"; };
 		D8D4B97028ABAEBA000BD6DD /* RegisterNewUserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterNewUserViewModel.swift; sourceTree = "<group>"; };
+		D8D780B928BE2724008FE566 /* RegisterUserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterUserViewModel.swift; sourceTree = "<group>"; };
+		D8D780BB28BE2741008FE566 /* RegisterUserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterUserModel.swift; sourceTree = "<group>"; };
+		D8D780BD28BE3C0D008FE566 /* SessionState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionState.swift; sourceTree = "<group>"; };
 		D8DC6E2E28AA37A8007355EF /* AutoFillFuncModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoFillFuncModel.swift; sourceTree = "<group>"; };
 		D8E43419289255F200FED1A6 /* CardTemplate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardTemplate.swift; sourceTree = "<group>"; };
 		D8E4341D2892765400FED1A6 /* CardDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardDetailsView.swift; sourceTree = "<group>"; };
@@ -227,6 +233,8 @@
 		D8D0BFF328BCED570002C94E /* Firestore Model */ = {
 			isa = PBXGroup;
 			children = (
+				D8D780BB28BE2741008FE566 /* RegisterUserModel.swift */,
+				D8D780BD28BE3C0D008FE566 /* SessionState.swift */,
 			);
 			name = "Firestore Model";
 			sourceTree = "<group>";
@@ -247,6 +255,7 @@
 		D8D0BFF528BCEDBD0002C94E /* Firestore VM */ = {
 			isa = PBXGroup;
 			children = (
+				D8D780B928BE2724008FE566 /* RegisterUserViewModel.swift */,
 			);
 			path = "Firestore VM";
 			sourceTree = "<group>";
@@ -374,6 +383,7 @@
 			files = (
 				D809E2F6289139E600E862A7 /* CardView.swift in Sources */,
 				D8992E43289179B200558A98 /* TransactionOverview.swift in Sources */,
+				D8D780BE28BE3C0D008FE566 /* SessionState.swift in Sources */,
 				D83DBD952890160C002F17E8 /* UserLoginDetailsView.swift in Sources */,
 				D88C7F0F288A93D8009C4064 /* UserState.swift in Sources */,
 				D8E43422289288CF00FED1A6 /* UserCardDetailsHeader.swift in Sources */,
@@ -391,6 +401,7 @@
 				D8992E412891796200558A98 /* HomeScreenView.swift in Sources */,
 				D809E2F82891508800E862A7 /* TransactionHistoryRow.swift in Sources */,
 				D84F2AE3289BE20F009B4429 /* RegistrationModel.swift in Sources */,
+				D8D780BC28BE2741008FE566 /* RegisterUserModel.swift in Sources */,
 				D8E4342628928FE900FED1A6 /* HelpDesk.swift in Sources */,
 				D86390F42897DCC0003DC263 /* TransactionView.swift in Sources */,
 				D8E775A928A0F1E8005F6A7C /* CreateNewError.swift in Sources */,
@@ -402,6 +413,7 @@
 				D8B0DC9D288850A800F42273 /* ATM_FirebaseDBApp.swift in Sources */,
 				D8CD9CC528B7730C00BDC0D0 /* ResetPassword.swift in Sources */,
 				D809E2FD289157D100E862A7 /* TransactionsHeader.swift in Sources */,
+				D8D780BA28BE2724008FE566 /* RegisterUserViewModel.swift in Sources */,
 				D8BD08672899237300A49373 /* EditPassword.swift in Sources */,
 				D8DC6E2F28AA37A8007355EF /* AutoFillFuncModel.swift in Sources */,
 				D84F2AE5289C01B8009B4429 /* UserViewModel.swift in Sources */,
