@@ -8,6 +8,45 @@
 import SwiftUI
 import FirebaseCore
 import Firebase
+
+// Firestore
+@main
+struct ATMApp: App {
+    
+    init() {
+        FirebaseApp.configure()
+    }
+ 
+    @StateObject var userStateViewModel = SessionState()
+    
+    var body: some Scene {
+        WindowGroup {
+            NavigationView{
+                ApplicationSwitcher()
+            }
+            .navigationViewStyle(.stack)
+            .environmentObject(userStateViewModel)
+            .navigationBarBackButtonHidden(true)
+            .navigationBarHidden(true)
+        }
+    }
+}
+
+struct ApplicationSwitcher: View {
+    
+    @EnvironmentObject var vm: SessionState
+    
+    var body: some View {
+        if (vm.isLoggedIn) {
+            HomeScreenView()
+        } else {
+            LoginView()
+        }
+        
+    }
+}
+
+
 /* //Auth View Manager
 @main
 struct ATM_FirebaseDBApp: App {
