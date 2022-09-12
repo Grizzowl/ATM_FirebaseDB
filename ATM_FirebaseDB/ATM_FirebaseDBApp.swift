@@ -11,38 +11,28 @@ import Firebase
 
 // Firestore
 @main
-struct ATMApp: App {
+struct ATM_FirebaseDBApp: App {
     
+    //Firebase setup
     init() {
         FirebaseApp.configure()
     }
- 
-    @StateObject var userStateViewModel = SessionState()
+    
+    @StateObject var sessionService = UserSessionImp()
     
     var body: some Scene {
         WindowGroup {
-            NavigationView{
-                ApplicationSwitcher()
+            NavigationView {
+                switch sessionService.state {
+                    case .loggedIn:
+                    HomePageControllerView()
+                            .environmentObject(sessionService)
+                    case .loggedOut:
+                    LoginView()
+                    }
+                
             }
-            .navigationViewStyle(.stack)
-            .environmentObject(userStateViewModel)
-            .navigationBarBackButtonHidden(true)
-            .navigationBarHidden(true)
         }
-    }
-}
-
-struct ApplicationSwitcher: View {
-    
-    @EnvironmentObject var vm: SessionState
-    
-    var body: some View {
-        if (vm.isLoggedIn) {
-            HomeScreenView()
-        } else {
-            LoginView()
-        }
-        
     }
 }
 
