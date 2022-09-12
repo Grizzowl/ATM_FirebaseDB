@@ -18,12 +18,6 @@ struct RegisterNewUserView: View {
         service: RegistrationServiceImp()
     )
     
-    @State var nameTextFieldText: String = ""
-    @State var surnameTextFieldText: String = ""
-    @State var idTextFieldText: String = ""
-    @State var telephoneTextFieldText: String = ""
-    @State var emailTextFieldText: String = ""
-   
     @State private var dateOfBirth = Date()
     @State private var getdateOfBirth = ""
     var formattedDate: DateFormatter {
@@ -51,37 +45,75 @@ struct RegisterNewUserView: View {
             List {
                 Group {
                     VStack {
-                        Text("Name")
+                        HStack{
+                            Text("First Name")
+                                .foregroundColor(regVM.nameInputError ? Color.red : .black)
+                            Image(systemName: "exclamationmark")
+                                .foregroundColor(regVM.nameInputError ? Color.red : .clear)
+                        }
                         //TextField("Name", text: $regVM.newUser.name) Firebase-Auth*
-                        TextField("Name", text: $regVM.newUser.name)
+                        TextField("First Name", text: $regVM.newUser.name)
+                            .disableAutocorrection(true)
                     }
                     .padding()
                     
-                    
                     VStack {
-                        Text("Surname")
+                        HStack{
+                            Text("Surname")
+                                .foregroundColor(regVM.surnameInputError ? Color.red : .black)
+                            Image(systemName: "exclamationmark")
+                                .foregroundColor(regVM.surnameInputError ? Color.red : .clear)
+                        }
                         //TextField("Surname", text: $regVM.newUser.surname) Firebase-Auth*
                         TextField("Surname", text: $regVM.newUser.surname)
+                            .disableAutocorrection(true)
                     }
                     .padding()
                     
                     
                     VStack {
-                        Text("ID") //look up regex make sure its a valid SA id format
+                        HStack{
+                            //update error binding
+                            Text("E-mail")
+                                .foregroundColor(regVM.emailInputError ? Color.red : .black)
+                            Image(systemName: "exclamationmark")
+                                .foregroundColor(regVM.emailInputError ? Color.red : .clear)
+                        }
+                        //TextField("Name", text: $regVM.newUser.name) Firebase-Auth*
+                        TextField("xxxx@email.com", text: $regVM.newUser.email)
+                            .disableAutocorrection(true)
+                            .autocapitalization(.none)
+                    }
+                    .padding()
+                    
+                    VStack {
+                        HStack{
+                            Text("ID number")
+                                .foregroundColor(regVM.idInputError ? Color.red : .black)
+                            Image(systemName: "exclamationmark")
+                                .foregroundColor(regVM.idInputError ? Color.red : .clear)
+                        }
                         //TextField("Your ID number", text: $regVM.newUser.userIDNumber) Firebase-Auth*
                         TextField("Your ID number", text: $regVM.newUser.userIDNumber)
+                            .disableAutocorrection(true)
                     }
                     .padding()
                     
                     // add phone and email when there is a bot set up to send otp information to user
                     
                     VStack {
-                        Text("Telephone")
+                        HStack{
+                            Text("Telephone number")
+                                .foregroundColor(regVM.telephoneInputError ? Color.red : .black)
+                            Image(systemName: "exclamationmark")
+                                .foregroundColor(regVM.telephoneInputError ? Color.red : .clear)
+                        }
                         HStack {
                             Text("+27")
                             Spacer()
                             //TextField("xx-xxx-xxxx", text: $regVM.newUser.telephone) Firebase-Auth*
                             TextField("xx-xxx-xxxx", text: $regVM.newUser.telephone)
+                                .disableAutocorrection(true)
                         }
                     }
                     .padding()
@@ -101,6 +133,9 @@ struct RegisterNewUserView: View {
                     }
                     .padding()
                 }
+                
+                //Firebase Auth code
+                Group {
                 /* Firebase-Auth*
                  Group {
                  Text("Enter Your Email")
@@ -156,7 +191,10 @@ struct RegisterNewUserView: View {
                  }
                  }
                  */
+                }
+                
                 // add a navlink to a PDF of the privacy policy and T&Cs +make both checkboxes mandatory
+                //grey out button if both are not clicked
                 HStack{
                     Image(systemName: termsAndConditionsCheckbox ? "checkmark.square.fill" : "square")
                         .foregroundColor(termsAndConditionsCheckbox ? (lightGreen) : Color.secondary)
@@ -183,7 +221,33 @@ struct RegisterNewUserView: View {
             // add a dead button untill all fields are fill in properly
             // Firebase-Auth*
             //  Button(action: {regVM.createNewUser()},//pass datefunc logic in savebutton func
-            Button(action: {regVM.create()},
+            Button("Test Alert") {
+                regVM.validateUserInput()
+                    }
+            .alert("Oops something went wrong", isPresented: $regVM.presentAlert, actions: {
+                       
+                        Button("Edit", action: {})
+                        
+                    }, message: {
+                        Text("Please make sure all fields are filled in")
+                    })
+            .alert("Successfully registered", isPresented: $regVM.successAlert, actions: {
+                       
+                        Button("Proceed", action: {})
+                        
+                    }, message: {
+                        Text("Welcome to Grizz Bank Ltd.")
+                    })
+            
+            Button(action: {
+                regVM.validateUserInput()
+                if regVM.errorRegNewUser {
+                    
+                } else {
+                    print("Success")
+                }
+                
+            },
                    label: {
                 Text("Save".uppercased())
                     .foregroundColor(.white)
@@ -202,18 +266,6 @@ struct RegisterNewUserView: View {
         
         
         
-    }
-    
-    private func setCardExpDate() -> Void {
-        
-        let currentDate = Date()
-        var cardExpDatemodifier = DateComponents()
-        cardExpDatemodifier.year = 5
-        let cardExpDate = Calendar.current.date(byAdding: cardExpDatemodifier, to: currentDate)
-        let expDateMonth = cardExpDate!.formatted(.dateTime.month(.twoDigits))
-        let expDateYear = cardExpDate!.formatted(.dateTime.year(.twoDigits))
-        let expDate = "\(expDateMonth)/\(expDateYear)"
-        return regVM.newUserCard.expDate = expDate
     }
     
     func saveButtonPressed(){
