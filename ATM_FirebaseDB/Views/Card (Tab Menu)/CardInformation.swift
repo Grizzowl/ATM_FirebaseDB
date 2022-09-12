@@ -9,6 +9,8 @@ import SwiftUI
 
 struct CardInformation: View {
     
+    @EnvironmentObject var service: UserSessionImp
+    
     @State var cardNumber:String = "0000 0000 0000 0000"
     @State var expDate:String = "02/23"
     @State var cvvNumber:String = "000"
@@ -27,10 +29,9 @@ struct CardInformation: View {
                 VStack {
                     Text("Card Number")
                         .bold()
-                    TextField("Card Number", text: $cardNumber)
-                        .disabled(true)
+                    Text("\(service.userCardDetails?.cardNumber ?? "Error Loading")")
                         .padding()
-                        .frame(height: 50)
+                        .frame(width: 400, height: 50)
                         .background(Color.black.opacity(0.05))
                         .cornerRadius(15)
                         .padding(1)
@@ -40,18 +41,16 @@ struct CardInformation: View {
                     HStack{
                         ZStack{
                             if showExpDateField == false {
-                                SecureField("Password", text: $expDate)
-                                    .disabled(true)
+                                Text("●●/●●")
                                     .padding()
-                                    .frame(height: 50)
+                                    .frame(width: 400, height: 50)
                                     .background(Color.black.opacity(0.05))
                                     .cornerRadius(15)
                                     .padding(1)
                             } else {
-                                TextField("Password", text: $expDate)
-                                    .disabled(true)
+                                Text("\(service.userCardDetails?.expDate ?? "Error Loading")")
                                     .padding()
-                                    .frame(height: 50)
+                                    .frame(width: 400, height: 50)
                                     .background(Color.black.opacity(0.05))
                                     .cornerRadius(15)
                                     .padding(1)
@@ -67,23 +66,21 @@ struct CardInformation: View {
                             .padding()
                     }
                     
-                    Text("Expiration Date")
+                    Text("CVV")
                         .bold()
                     HStack{
                         ZStack{
                             if showCvvField == false {
-                                SecureField("Password", text: $cvvNumber)
-                                    .disabled(true)
+                                Text("●●●")
                                     .padding()
-                                    .frame(height: 50)
+                                    .frame(width: 400, height: 50)
                                     .background(Color.black.opacity(0.05))
                                     .cornerRadius(15)
                                     .padding(1)
                             } else {
-                                TextField("Password", text: $cvvNumber)
-                                    .disabled(true)
+                                Text("\(service.userCardDetails?.cvvNumber ?? "Error Loading")")
                                     .padding()
-                                    .frame(height: 50)
+                                    .frame(width: 400, height: 50)
                                     .background(Color.black.opacity(0.05))
                                     .cornerRadius(15)
                                     .padding(1)
@@ -164,5 +161,6 @@ struct CardInformation: View {
 struct CardInformationView_Previews: PreviewProvider {
     static var previews: some View {
         CardInformation()
+            .environmentObject(UserSessionImp())
     }
 }
