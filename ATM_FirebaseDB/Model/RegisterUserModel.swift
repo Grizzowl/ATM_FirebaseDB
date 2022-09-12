@@ -23,21 +23,6 @@ struct RegistrationDetails {
     var accountNumber: String
 }
 
-struct BankCardModel {
-    
-    var username: String
-    var balance: Double
-    var cardNumber: String
-    var expDate: String
-    var cvvNumber: String
-
-}
-
-protocol RegistrationHandler {
-    func registerNewUserCredentials(with userCredentials: RegistrationDetails)
-    func registerNewUserCard(with cardCredentials: BankCardModel)
-}
-
 enum RegistrationUserKeys: String {
     
     case name
@@ -51,6 +36,16 @@ enum RegistrationUserKeys: String {
     case accountNumber
 }
 
+struct BankCardModel {
+    
+    var username: String
+    var balance: Double
+    var cardNumber: String
+    var expDate: String
+    var cvvNumber: String
+    
+}
+
 enum RegistrationUserCardKeys: String {
     
     case username
@@ -60,30 +55,21 @@ enum RegistrationUserCardKeys: String {
     case cvvNumber
     
 }
-    // For later use
-struct UserTransactionHistory {
-    var transactionPaymentReference: String
-    var transactionHistoryAmount: Double
-    var transactionHistoryDate: String
-}
 
-enum UserTransactionHistoryKeys: String {
-    case transactionPaymentReference
-    case transactionHistoryAmount
-    case transactionHistoryDate
+protocol RegistrationHandler {
+    func registerNewUserCredentials(with userCredentials: RegistrationDetails)
+    func registerNewUserCard(with cardCredentials: BankCardModel)
 }
 
 final class RegistrationServiceImp: RegistrationHandler {
     
-    
-    
     func registerNewUserCredentials(with userCredentials: RegistrationDetails) {
         
-        //get ref to DB
+        //ref to DB
         let db = Firestore.firestore()
         let userCredentialsPath = db
             .collection("UserTable").document(userCredentials.username)
-            .collection("UserProfile")
+            .collection("UserProfile").document("\(userCredentials.username)_UserProfile")
         
         let credentialValues = [RegistrationUserKeys.name.rawValue: userCredentials.name,
                                 RegistrationUserKeys.surname.rawValue: userCredentials.surname,
@@ -95,13 +81,12 @@ final class RegistrationServiceImp: RegistrationHandler {
                                 RegistrationUserKeys.password.rawValue: userCredentials.password,
                                 RegistrationUserKeys.accountNumber.rawValue: userCredentials.accountNumber] as [String : Any]
         
-        //add a doc to
-        userCredentialsPath.addDocument(data: credentialValues) { error in
+        //add a doc to Path
+        userCredentialsPath.setData(credentialValues, merge: false) { error in
             
             //chack for error
             if error == nil {
                 //no error
-                //self.getTodoData()
             } else {
                 //handle the error
             }
@@ -112,11 +97,11 @@ final class RegistrationServiceImp: RegistrationHandler {
     
     func registerNewUserCard(with cardCredentials: BankCardModel) {
         
-        //get ref to DB
+        //ref to DB
         let db = Firestore.firestore()
-        let userCredentialsPath = db
+        let userCardCredentialsPath = db
             .collection("UserTable").document(cardCredentials.username)
-            .collection("UserCard")
+            .collection("UserCard").document("\(cardCredentials.username)_UserCard")
         
         let cardValues = [RegistrationUserCardKeys.username.rawValue: cardCredentials.username,
                           RegistrationUserCardKeys.balance.rawValue: cardCredentials.balance,
@@ -124,13 +109,13 @@ final class RegistrationServiceImp: RegistrationHandler {
                           RegistrationUserCardKeys.expDate.rawValue: cardCredentials.expDate,
                           RegistrationUserCardKeys.cvvNumber.rawValue: cardCredentials.cvvNumber] as [String : Any]
         
-        //add a doc to
-        userCredentialsPath.addDocument(data: cardValues) { error in
+        //add a doc to Path
+        userCardCredentialsPath.setData(cardValues, merge: false) { error in
             
             //chack for error
             if error == nil {
                 //no error
-                //self.getTodoData()
+                
             } else {
                 //handle the error
             }
