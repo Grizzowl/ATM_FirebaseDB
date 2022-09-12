@@ -9,6 +9,8 @@ import SwiftUI
 
 struct CardView: View {
     
+    @EnvironmentObject var service: UserSessionImp
+    
     let darkGreen = Color("DarkGreen")
     let lightGreen = Color("LightGreen")
     let gold = Color("Gold")
@@ -20,7 +22,7 @@ struct CardView: View {
                 VStack{
                     Text("Premium Account")
                         .foregroundColor(.white)
-                    Text("4012 8888 8888 1881")         //card nummber backend generated
+                    Text("Acc no. \(service.userDetails?.accountNumber ?? "N/A")")
                         .foregroundColor(.white)
                         .font(.caption)
                 }
@@ -42,7 +44,7 @@ struct CardView: View {
                 Text("ZAR")
                     .foregroundColor(.white)
                     .font(.caption)
-                Text("R 1 ,200 ,000.00")            // link firebase current amount
+                Text("\(service.userCardDetails?.balance ?? 0)")            // link firebase current amount
                     .foregroundColor(.white)
                     .font(.headline)
                     .fontWeight(.heavy)
@@ -50,7 +52,7 @@ struct CardView: View {
             .padding(.bottom)
             Spacer()
             HStack {
-                Text("M Hunt")                  // initial first name and full last name
+                Text("\(service.userDetails?.name ?? "N/A") \(service.userDetails?.surname ?? "N/A")")
                     .foregroundColor(.white)
                     .font(.caption)
                     .bold()
@@ -61,7 +63,7 @@ struct CardView: View {
                     .font(.caption)
                     .bold()
                     .padding(.bottom)
-                Text("01/29")                   //get from firebase (+5years from account creation)
+                Text("\(service.userCardDetails?.expDate ?? "N/A")")                   //get from firebase (+5years from account creation)
                     .foregroundColor(.white)
                     .font(.caption)
                     .padding(.bottom)
@@ -85,5 +87,6 @@ struct CardView: View {
 struct CardView_Previews: PreviewProvider {
     static var previews: some View {
         CardView()
+            .environmentObject(UserSessionImp())
     }
 }
