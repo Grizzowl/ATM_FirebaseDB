@@ -11,6 +11,9 @@ struct UserProfileDetails: View {
     /* Firebase-Auth*
     @EnvironmentObject var uSImp: UserSessionImp
     */
+    
+    @EnvironmentObject var service: UserSessionImp
+    
     //Account holders name
     @State var accountHoldersName:String = "Mike Hunt"
     //Email Address
@@ -42,6 +45,7 @@ struct UserProfileDetails: View {
                     Button {
                         Task{
                            // uSImp.logout() Firebase-Auth*
+                            service.logout()
                         }
                     } label: {
                         Text("Sign Out")
@@ -63,9 +67,8 @@ struct UserProfileDetails: View {
                         .foregroundColor(.black.opacity(0.7))
                         .frame(width: 400, height: 30, alignment: .leading)
                     
-                    TextField("Enter account holder name/s here", text: $accountHoldersName)
-                        .disabled(true)
-                        .frame(width: 400, height: 35)
+                    Text("\(service.userDetails?.name ?? "Error Loading") \(service.userDetails?.surname ?? "Error Loading")")
+                        .frame(width: 400, height: 35, alignment: .leading)
                         .font(.title2)
                     
                     Rectangle()
@@ -75,16 +78,15 @@ struct UserProfileDetails: View {
                 }
                 
                 Group{
-                    //Email Address
+                    //Email Address allow update email
                     Text("Email Address")
                         .foregroundColor(lightGreen)
                         .foregroundColor(.black.opacity(0.7))
                         .frame(width: 400, height: 30, alignment: .leading)
                     
                     HStack {
-                        TextField("\(lastEmail)", text: $personalEmail)
-                            .disabled(editPersonalEmail)
-                            .frame(width: 400, height: 40)
+                        Text("\(service.userDetails?.name ?? "Error Loading")")
+                            .frame(width: 400, height: 40, alignment: .leading)
                             .background(editPersonalEmail ?  .clear : Color.black.opacity(0.1))
                             .font(.title2)
                     }
@@ -180,6 +182,8 @@ struct UserProfileDetails: View {
 struct UserProfileDetails_Previews: PreviewProvider {
     static var previews: some View {
         UserProfileDetails()
+            .environmentObject(UserSessionImp())
+
             // .environmentObject(UserSessionImp()) Firebase-Auth*
     }
 }
