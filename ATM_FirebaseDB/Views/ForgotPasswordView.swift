@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ForgotPasswordView: View {
     
-    @StateObject private var rPVMImp = ResetPasswordViewModelImp(
+    @StateObject private var rpvmImp = ResetPasswordViewModelImp(
         service: ResetPasswordServiceImp()
     )
     
@@ -38,7 +38,7 @@ struct ForgotPasswordView: View {
                         .frame(width: 400, height: 30, alignment: .leading)
                     
                     
-                    TextField("Current Email", text: $rPVMImp.email) 
+                    TextField("Current Email", text: $rpvmImp.email)
                         .padding()
                         .frame(width: 350, height: 50)
                         .background(Color.black.opacity(0.05))
@@ -60,7 +60,7 @@ struct ForgotPasswordView: View {
                 VStack{
                     
                     Button(
-                        action: rPVMImp.sendPasswordResetRequest,
+                        action: rpvmImp.sendPasswordResetRequest,
                         label: {Text("Submit".uppercased())
                                 .foregroundColor(.white)
                                 .font(.headline)
