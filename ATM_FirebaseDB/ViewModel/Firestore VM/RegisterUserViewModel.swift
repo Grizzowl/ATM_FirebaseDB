@@ -21,14 +21,19 @@ protocol RegistrationViewModel {
 final class RegistrationViewModelImp: ObservableObject, RegistrationViewModel {
     
     @Published var errorRegNewUser = false
-    
     @Published var presentAlert = false
     @Published var successAlert = false
+    
     @Published var nameInputError: Bool = false
     @Published var surnameInputError: Bool = false
     @Published var idInputError: Bool = false
     @Published var telephoneInputError: Bool = false
     @Published var emailInputError: Bool = false
+    @Published var termsAndConditionsCheckbox = false
+    @Published var PrivacyPolicyCheckbox = false
+    
+    @Published var usernameInputError: Bool = false
+    @Published var passwordInputError: Bool = false
     
     let service: RegistrationHandler
     @Published var newUser = RegistrationDetails(name: "",
@@ -38,7 +43,7 @@ final class RegistrationViewModelImp: ObservableObject, RegistrationViewModel {
                                                  dateOfBirth: "",
                                                  email: "",
                                                  username:"Bob123",
-                                                 password: "Bob123",
+                                                 password: "Bob123", //auto gen user can edit later
                                                  accountNumber: "\(2596) \(Int.random(in: 1000...9999)) \(Int.random(in: 100...999))") //auto gen
     
     @Published var newUserCard = BankCardModel(username: "Bob123",
@@ -74,7 +79,7 @@ final class RegistrationViewModelImp: ObservableObject, RegistrationViewModel {
             }
     }
     
-    func validateUserInput () {
+    func validateUserRegInput () {
         
         nameInputError = false
         surnameInputError = false
@@ -97,9 +102,31 @@ final class RegistrationViewModelImp: ObservableObject, RegistrationViewModel {
         if newUser.telephone == "" {
             telephoneInputError = true
         }
-       
         
-        if nameInputError == true || surnameInputError == true || idInputError == true || telephoneInputError == true || emailInputError == true {
+        
+        if nameInputError == true || surnameInputError == true || idInputError == true || telephoneInputError == true || emailInputError == true || termsAndConditionsCheckbox == false || PrivacyPolicyCheckbox == false {
+            presentAlert = true
+        } else {
+            //no input error
+            presentAlert = false
+            successAlert = true
+            //createNewUser() move to user pass view
+        }
+        
+    }
+    
+    func validateUserLoginDetails () {
+        usernameInputError = false
+        passwordInputError = false
+        
+        if newUser.username == "" {
+            usernameInputError = true
+        }
+        if newUser.password == "" {
+            passwordInputError = true
+        }
+        
+        if usernameInputError == true || passwordInputError == true {
             presentAlert = true
         } else {
             //no input error
